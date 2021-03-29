@@ -48,7 +48,7 @@ class PaymentController extends Controller
                 'code_order' => $request->code,
                 'transfer'   => $request->payment,
                 'amount'     => $idSubcription->price,
-                'status'    => '1',
+                'status'    => '2',
                 'image'     => $request->image,    
                 'id_user'   => $id_user,
                 'created_at'    => Carbon::now(),
@@ -182,14 +182,25 @@ class PaymentController extends Controller
     {
         var_dump($request->all());
 
-        $table = DB::table('payment')
-                        ->where('code_order',$request->code)
-                        ->update(['transfer'=>$request->payment]);
+        
+
 
         if ($request->payment == 'COD') {
-            return redirect()->route("payment.cod");
+            $table = DB::table('payment')
+                        ->where('code_order',$request->code)
+                        ->update([
+                            'transfer'=>$request->payment,
+                            'status'    => '2'
+                            ]);
+
+            return redirect("payment/cod/$request->code");
         }
         else{
+            $table = DB::table('payment')
+                        ->where('code_order',$request->code)
+                        ->update([
+                            'transfer'=>$request->payment,
+                            ]);
             return redirect("payment/detail/$request->code");
         }
         // return redirect("payment/detail/$request->code");

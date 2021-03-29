@@ -20,27 +20,27 @@
                     <input type="hidden" name="date_delivery" value="{{ $date_delivery }}">
                     <div class="form-group">
                         <!-- <label for="">Nama Lengkap</label> -->
-                        <input type="text" class="form-control" placeholder="Nama Lengkap"  name="full_name" autocomplete="off">
+                        <input type="text" class="form-control" placeholder="Nama Lengkap"  name="full_name" autocomplete="off" required>
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" min="0" placeholder="Nomor WhatsApp" name="phone" id="" autocomplete="off">
+                        <input type="number" class="form-control" min="0" placeholder="Nomor WhatsApp" name="phone" id="" autocomplete="off" required>
                     </div>
                     <div class="form-group">
                         <!-- <label for="">Email</label> -->
-                        <input type="email" class="form-control"  placeholder="Email" name="email" autocomplete="off">
+                        <input type="email" class="form-control"  placeholder="Email" name="email" autocomplete="off" required>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <!-- <option value="">Kabupaten</option> -->
-                            <select class="form-control city" name="kabupaten" id="kabupaten" placeholder="Kabupaten">
+                            <select class="form-control city" name="kabupaten" id="kabupaten" placeholder="Kabupaten" required>
                                 @foreach ($table_map as $kabupaten)
                                     <option value="{{ $kabupaten->kabupaten }}">{{ $kabupaten->kabupaten }}</option>
                                 @endforeach
                                 </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <select class="form-control kecamatan disabled" name="kecamatan" id="kecamatan">
+                            <select class="form-control kecamatan disabled" name="kecamatan" id="kecamatan" required>
                                 <option value="">Kecamatan</option>
                             </select>
                         </div>
@@ -48,7 +48,7 @@
 
                     <div class="form-group">
                         <!-- <label for="">Alamat</label> -->
-                        <textarea name="address" class="form-control" id="" cols="30" rows="10" placeholder="Alamat" autocomplete="off"></textarea>
+                        <textarea name="address" class="form-control" id="" cols="30" rows="10" placeholder="Alamat" autocomplete="off" required></textarea>
                     </div>
                     {{-- <p id="kecamatan"></p> --}}
                     <button class="btn next">Lanjutkan</button>
