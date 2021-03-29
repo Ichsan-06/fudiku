@@ -34,14 +34,16 @@
                         <div class="form-group col-md-6">
                             <!-- <option value="">Kabupaten</option> -->
                             <select class="form-control city" name="kabupaten" id="kabupaten" placeholder="Kabupaten" required>
+                                <option value="">-- Pilih Kabupaten --</option>
                                 @foreach ($table_map as $kabupaten)
-                                    <option value="{{ $kabupaten->kabupaten }}">{{ $kabupaten->kabupaten }}</option>
+                                    <option value="{{ $kabupaten->kabupaten }}" <?php if ($location == $kabupaten->kabupaten)echo  "selected" ?>>{{ $kabupaten->kabupaten }}</option>
                                 @endforeach
                                 </select>
                         </div>
                         <div class="form-group col-md-6">
                             <select class="form-control kecamatan disabled" name="kecamatan" id="kecamatan" required>
-                                <option value="">Kecamatan</option>
+                                {{-- <option value="">Kecamatan</option> --}}
+                                <option value="{{ $kecamatan }}">{{ $kecamatan }}</option>
                             </select>
                         </div>
                     </div>

@@ -19,6 +19,7 @@
                             <input type="hidden" name="tanggal" id="tanggal">
                             <input type="hidden" name="id_subcategory" value="{{ $subCategory->id }}">
                             <input type="hidden" name="id_subscription" value="{{ $id_subscription }}">
+                            <input type="hidden" name="location" value="{{ $location }}">
                         </div>
                     </div>
                     <div class="col-md-8">

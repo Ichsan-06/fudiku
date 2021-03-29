@@ -29,6 +29,7 @@ class ScheduleController extends Controller
             'product'       =>  $product,
             'tb_subscription' => $subscription,
             'id_subscription' => $request->subscription,
+            'location'          => $request->location
         ]);
     }
 

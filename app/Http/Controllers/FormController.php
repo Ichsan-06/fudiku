@@ -33,6 +33,9 @@ class FormController extends Controller
         //     }
         // }
         $tableMap = DB::table('map')->get();
+        $kecamatan =  DB::table('map')
+                    ->where('kabupaten',$request->location)
+                    ->first();
 
         if (!Auth::guest()){
             
@@ -41,6 +44,8 @@ class FormController extends Controller
                 'id_subcategory'=> $request->id_subcategory,
                 'id_subscription'   => $request->id_subscription,
                 'table_map'     => $tableMap,
+                'location'      => $request->location,
+                'kecamatan'     => $kecamatan->kecamatan,
                 'email'         => $id_user = Auth::user()->email,
             ]);
            
@@ -51,6 +56,8 @@ class FormController extends Controller
                 'id_subcategory'=> $request->id_subcategory,
                 'id_subscription'   => $request->id_subscription,
                 'table_map'     => $tableMap,
+                'location'      => $request->location,
+                'kecamatan'     => $kecamatan->kecamatan,
                 'email'     => null
                
             ]);

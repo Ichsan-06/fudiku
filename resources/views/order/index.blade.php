@@ -59,7 +59,7 @@
                         <div class="order-packet">
                             <div class="packet-title">
                                 <h3 class="title">Pilih paket anda</h3>
-                                <h2>{{ $location }}</h2>
+                                {{-- <h2>{{ $location }}</h2> --}}
                             </div>
                             <div class="packet-option">
                                 @foreach ($subscription as $data_sub)
@@ -109,6 +109,7 @@
                             </div> -->
                         </div>
                         <div class="order-cta">
+                            <input type="hidden" name="location" value="{{ $location }}">
                             <button type="submit" class="btn next">Atur Tanggal</button>
                         </div>
                     </div>
