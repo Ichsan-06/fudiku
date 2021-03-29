@@ -48,7 +48,9 @@ Route::post('/formLocation','FormController@formLocation');
 
 Route::get('/payment/{code}','PaymentController@index')->name('payment');
 Route::post('/payment/post/','PaymentController@post')->name('payment.post');
-Route::get('payment/detail/cod','PaymentController@cod')->name('payment.cod');
+
+Route::get('payment/cod/{code}','PaymentController@cod');
+
 Route::get('/payment/update/{code}','PaymentController@change');
 Route::post('/payment/postUpdate/','PaymentController@postChange')->name('paymentpostUpdate');
 

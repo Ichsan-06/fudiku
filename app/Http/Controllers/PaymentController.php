@@ -41,27 +41,62 @@ class PaymentController extends Controller
             $id_user = null;
         }
         
-        DB::table('payment')->insert([
-            'code_order' => $request->code,
-            'transfer'   => $request->payment,
-            'amount'     => $idSubcription->price,
-            'status'    => '0',
-            'image'     => $request->image,    
-            'id_user'   => $id_user,
-            'created_at'    => Carbon::now(),
-        ]);
         
         // vardump($request);
         if ($request->payment == 'COD') {
-            return redirect()->route("payment.cod");
+            DB::table('payment')->insert([
+                'code_order' => $request->code,
+                'transfer'   => $request->payment,
+                'amount'     => $idSubcription->price,
+                'status'    => '1',
+                'image'     => $request->image,    
+                'id_user'   => $id_user,
+                'created_at'    => Carbon::now(),
+            ]);
+            return redirect("payment/cod/$request->code");
         }
         else{
+            DB::table('payment')->insert([
+                'code_order' => $request->code,
+                'transfer'   => $request->payment,
+                'amount'     => $idSubcription->price,
+                'status'    => '0',
+                'image'     => $request->image,    
+                'id_user'   => $id_user,
+                'created_at'    => Carbon::now(),
+            ]);
             return redirect("payment/detail/$request->code");
         }
 
     }
-    public function cod()
+    public function cod($code)
     {
+        $payment = DB::table('payment')
+                ->where('code_order',$code)->first();
+
+        $order  = DB::table('order')
+                ->select('subscription.name as subsName','category.name as nameCategory','subscription.duration')
+                ->join('subscription','order.subcription','=','subscription.id')
+                ->join('sub_category','order.sub_category','=','sub_category.id')
+                ->join('category','sub_category.parentId','=','category.id')
+                ->where('code_order',$code)->first();
+
+        $name = DB::table('order')
+                ->join('profile','order.id_customer','=','profile.id')
+                ->where('order.code_order',$code)->first();
+
+        $email_data = array(
+                    'name' => $name->full_name,
+                    'metode'=>$payment->transfer, 
+                    'jumlah'=>$payment->amount, 
+                    'paket'=>$order->nameCategory,
+                    'duration'=>$order->duration,
+                    'subsName'=>$order->subsName,
+                );
+         $alamat = $name->email;
+        // return new \App\Mail\WelcomeMail($email_data);
+        Mail::to("$alamat")->send(new \App\Mail\WelcomeMail($email_data));
+
         return view('payment.cod');
     }
 
@@ -117,6 +152,7 @@ class PaymentController extends Controller
                 ->join('sub_category','order.sub_category','=','sub_category.id')
                 ->join('category','sub_category.parentId','=','category.id')
                 ->where('code_order',$code_order)->first();
+
         $name = DB::table('order')
                 ->join('profile','order.id_customer','=','profile.id')
                 ->where('order.code_order',$code_order)->first();
@@ -130,7 +166,7 @@ class PaymentController extends Controller
             'subsName'=>$order->subsName,
         );
         // return new \App\Mail\WelcomeMail($email_data);
-       echo $alamat = $request->email;
+        $alamat = $request->email;
         Mail::to("$alamat")->send(new \App\Mail\WelcomeMail($email_data));
         return redirect('/finish');
     }
