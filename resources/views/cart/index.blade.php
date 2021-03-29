@@ -29,7 +29,21 @@
             @endphp             
             <div class="cart-content d-block" style="background-color: {{ $bg }}">
                 <div class="cart-desc">
+                    
                     <h5 class="subcategory">{{ $tableOrder->subCat_name }}</h5>
+                    @php
+                        if($payment->status == 0){
+                            $status = 'Belum Bayar';
+                        }
+                        elseif ($payment->status == 1) {
+                            $status = 'Sudah Bayar';
+                        }
+                        else{
+                            $status = 'Dalam Pengiriman';
+                        }
+                    @endphp
+                    
+                    <h3>Status : {{ $status }}</h3>
                     <h6 class="packet">{{ $tableOrder->subscription_name }} - <span>{{ $tableOrder->duration }} Hari</span></h6>
                     <!-- <h6 class="date">{{ date('D, j F Y',strtotime($tableOrder->tanggal_pesanan) ) }} </h6> -->
                     <h5 class="price">Rp.{{ getPrice($payment->amount) }}</h5>

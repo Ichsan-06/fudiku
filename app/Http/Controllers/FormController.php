@@ -32,15 +32,32 @@ class FormController extends Controller
         //         echo "yes";
         //     }
         // }
-        
-         $tableMap = DB::table('map')->get();
+        $tableMap = DB::table('map')->get();
 
-        return view('form.index',[
-            'date_delivery' => $request->tanggal,
-            'id_subcategory'=> $request->id_subcategory,
-            'id_subscription'   => $request->id_subscription,
-            'table_map'     => $tableMap
-        ]);
+        if (!Auth::guest()){
+            
+            return view('form.index',[
+                'date_delivery' => $request->tanggal,
+                'id_subcategory'=> $request->id_subcategory,
+                'id_subscription'   => $request->id_subscription,
+                'table_map'     => $tableMap,
+                'email'         => $id_user = Auth::user()->email,
+            ]);
+           
+        }
+        else{            
+            return view('form.index',[
+                'date_delivery' => $request->tanggal,
+                'id_subcategory'=> $request->id_subcategory,
+                'id_subscription'   => $request->id_subscription,
+                'table_map'     => $tableMap,
+                'email'     => null
+               
+            ]);
+        }
+
+       
+
     }
 
     /**
