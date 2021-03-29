@@ -16,7 +16,7 @@ Route::get('/email',function(){
                 'subsName'=>"HAh",
             );
         // return new \App\Mail\WelcomeMail($email_data);
-       $data =  Mail::to("013ichsanm@gmail.com")->send(new \App\Mail\WelcomeMail($email_data));
+       $data =  Mail::to("018ichsanm@gmail.com")->send(new \App\Mail\WelcomeMail($email_data));
             if ($data) {
                 echo "Ber";
         }
