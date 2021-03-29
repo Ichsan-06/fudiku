@@ -40,7 +40,24 @@
                     </div> --}}
                 </div>
                 <div class="cart-menu owl-carousel owl-theme">
-                    @for($i = 1 ; $i < 7 ; $i++)
+                    @php
+                        $tableProduct = DB::table('order')
+                                        ->where('code_order',$payment->code_order)
+                                        ->join('product','order.date_delivery','=','product.date_delivery')
+                                        ->get();
+                    @endphp
+                    @foreach ($tableProduct as $product)
+                        <div class="cart-item">
+                            <div class="cart-img">
+                                <img src='{{ asset("img/product/$product->image") }}' class="w-100" alt="">
+                            </div>
+                            <div class="cart-desc">
+                            <span class="date">{{date('d-m-Y', strtotime($product->date_delivery)) }}</span>  
+                            <p class="name">{{ $product->name }}</p> 
+                            </div>
+                        </div>
+                    @endforeach
+                    {{-- @for($i = 1 ; $i < 7 ; $i++)
                     <div class="cart-item">
                         <div class="cart-img">
                             <img src="{{ asset('img/menu/ayam-goreng.jpg') }}" class="w-100" alt="">
@@ -50,7 +67,7 @@
                         <p class="name">Ayam Bakar</p> 
                         </div>
                     </div>
-                    @endfor
+                    @endfor --}}
                 </div>
             </div>
         @endforeach
