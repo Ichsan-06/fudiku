@@ -47,7 +47,9 @@
             <div class="form-group">
                 <button type="submit" class="btn register">Daftar</button>
             </div>
-            <span>Sudah punya akun? <a href="{{ route('login') }}">Login</a></span>
+            <div class="footer-title">
+                <p class="have-account">Sudah punya akun? <a href="{{ route('login') }}">Masuk</a></p>
+            </div>
         </form>
     </div>    
     <div class="form-img">

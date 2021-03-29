@@ -28,7 +28,10 @@
             <div class="form-group">
                 <button class="btn login">Login</button>
             </div>
-            <span>Belum punya akun? <a href="{{ route('register') }}">Daftar disini</a></span>
+            <div class="footer-title">
+                <p class="dont-have-account">Belum punya akun? <a href="{{ route('register') }}">Daftar disini</a></p>
+                <p class="forget-password">Lupa Sandi? <a href="">Hubungi Customer Service</a></p>
+            </div>
         </form>
     </div>
     <div class="form-img">

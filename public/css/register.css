@@ -73,6 +73,19 @@ body{
         height: 100%;
         
     }
+    .fudiku-register-user .footer-title{
+        /* border: 1px solid #000; */
+        text-align: center;
+    }
+    .fudiku-register-user .footer-title .have-account{
+        font-size: 14px;
+        margin: 0;
+        
+    }
+    .fudiku-register-user .footer-title .have-account a{
+        text-decoration: none;
+        color: #F03A40;
+    }
 }
 @media (max-width: 576px){
     .fudiku-register{
@@ -117,6 +130,19 @@ body{
     .fudiku-register-user .form-logo img{
     }
     .fudiku-register-user .form-register form{
+    }
+    .fudiku-register-user .footer-title{
+        /* border: 1px solid #000; */
+        text-align: center;
+    }
+    .fudiku-register-user .footer-title .have-account{
+        font-size: 14px;
+        margin: 0;
+        
+    }
+    .fudiku-register-user .footer-title .have-account a{
+        text-decoration: none;
+        color: #F03A40;
     }
     
 }

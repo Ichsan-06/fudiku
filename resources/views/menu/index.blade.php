@@ -8,7 +8,7 @@
         <div class="fudiku-search">
             <div class="form-field">
                 <i class="icofont-rounded-down"></i></button>
-                <input type="text" disabled class="form-control" placeholder="Medan" value="{{ $location }}">
+                <input type="text" class="form-control" placeholder="Medan" value="{{ $location }}">
             </div>
         </div>
         <div class="fudiku-category">

@@ -6,13 +6,13 @@
 
 <div class="fudiku-home-area">
     <div class="container-lg">
-        <div class="home-slider owl-carousel owl-theme">
+        <div class="home-banner owl-carousel owl-theme">
             @for($i = 0; $i < 4; $i++)
             <div class="home-item">
                 <div class="row">
                     <div class="col-md-8">
                         <div class="home-img">
-                            <img src="{{ asset('img/slider/1.png') }}" class="w-100" alt="">
+                            <img src="{{ asset('img/banner/1.png') }}" class="w-100" alt="">
                         </div>
                     </div>
                     <div class="col-md-4">

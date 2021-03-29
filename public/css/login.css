@@ -24,11 +24,11 @@ body{
 }
 @media (min-width: 576px){
     body{
-    background-color: #F9F8F7;
-    font-family: 'Chromatica';
-    margin: 0;
-    padding: 0;
-}
+        background-color: #F9F8F7;
+        font-family: 'Chromatica';
+        margin: 0;
+        padding: 0;
+    }
     .fudiku-login-user{
         position: relative;
         overflow: hidden;
@@ -88,6 +88,20 @@ body{
         background-image: linear-gradient(180deg,#F03A40,#EB484E);
         border-color: #F03A40;
         font-family: 'ChromaticaLight';
+    }
+    .fudiku-login-user .footer-title{
+        border: 1px solid #000;
+        text-align: center;
+        font-size: 14px;
+    }
+    .fudiku-login-user .footer-title .dont-have-account,
+    .fudiku-login-user .footer-title .forget-password{
+        margin: 0;
+    }
+    .fudiku-login-user .footer-title .dont-have-account a,
+    .fudiku-login-user .footer-title .forget-password a{
+        text-decoration: none;
+        color: #F03A40;
     }
     .fudiku-login-admin{
         position: relative;
@@ -202,7 +216,20 @@ body{
         border-color: #F03A40;
         font-family: 'ChromaticaLight';
     }
-    
+    .fudiku-login-user .footer-title{
+        border: 1px solid #000;
+        text-align: center;
+        font-size: 14px;
+    }
+    .fudiku-login-user .footer-title .dont-have-account,
+    .fudiku-login-user .footer-title .forget-password{
+        margin: 0;
+    }
+    .fudiku-login-user .footer-title .dont-have-account a,
+    .fudiku-login-user .footer-title .forget-password a{
+        text-decoration: none;
+        color: #F03A40;
+    }
     .fudiku-login-admin{
 
     }

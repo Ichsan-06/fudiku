@@ -36,7 +36,7 @@
                   <!-- <form action="{{ route('register') }}" class="form-inline">
                     <button class="btn login bg-primary">{{ __('Daftar') }}</button>
                   </form> -->
-                  <a href="{{ route('login') }}" class="btn register ">{{ __('Daftar') }}</a> 
+                  <a href="{{ route('register') }}" class="btn register ">{{ __('Daftar') }}</a> 
                 @endif
             @else
                 <li class="nav-item dropdown">
