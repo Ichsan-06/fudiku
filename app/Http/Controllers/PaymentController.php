@@ -68,10 +68,9 @@ class PaymentController extends Controller
     public function detail($code)
     {           
         $table = DB::table('payment')
-        ->join('transfer','payment.transfer','=','transfer.name')
-        
-        ->where('payment.code_order',$code)
-                        ->first();
+            ->join('transfer','payment.transfer','=','transfer.name')
+            ->where('payment.code_order',$code)
+            ->first();
         // echo $table->name;
 
         $db_order = DB::table('order')

@@ -20,10 +20,15 @@
                 </div>
                 <div class="col-md-4">
                     <div class="detail-information">
-                        {{-- <div class="detail-info">
+                        <div class="detail-info">
                             <h6 class="info-head"><strong>Batas Akhir Pembayaran</strong></h6>
-                            <small>Minggu, 18 Okt 2020 13.00 WIB</small>
-                        </div> --}}
+                            @php
+                                use carbon\carbon;
+                                $tgl = $table->created_at;
+                                $date = Carbon::parse("$tgl")->addHour(24);
+                            @endphp
+                            <small>{{ date('d, j F Y',strtotime($date) ) }} WIB</small>
+                        </div>
                         <div class="detail-info">
                             <h6><strong>Tranfer Via</strong></h6>
                             

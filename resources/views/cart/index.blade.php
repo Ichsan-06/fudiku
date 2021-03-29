@@ -20,7 +20,7 @@
                                 ->join('profile','order.id_customer','=','profile.id')
                                 ->select('order.created_at AS tanggal_pesanan', 'subscription.name AS subscription_name','subscription.duration', 'sub_category.name AS subCat_name','profile.*')
                                 ->first();
-                if ($payment->status = 0) {
+                if ($payment->status == 0) {
                     $bg = '#F0F0F0';
                 }
                 else{
@@ -57,18 +57,11 @@
                             </div>
                         </div>
                     @endforeach
-                    {{-- @for($i = 1 ; $i < 7 ; $i++)
-                    <div class="cart-item">
-                        <div class="cart-img">
-                            <img src="{{ asset('img/menu/ayam-goreng.jpg') }}" class="w-100" alt="">
-                        </div>
-                        <div class="cart-desc">
-                        <span class="date">Rab 21 Okt 2020</span>  
-                        <p class="name">Ayam Bakar</p> 
-                        </div>
-                    </div>
-                    @endfor --}}
                 </div>
+                @if ($payment->status == 0)
+                    <a href='{{ "payment/detail/$payment->code_order" }}' class="btn btn-danger mt-3">Bayar Sekarang</a>
+                @endif
+                
             </div>
         @endforeach
 
