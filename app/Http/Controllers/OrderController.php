@@ -15,7 +15,7 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index( $id)
+    public function index($location,$id)
     {
         //
         $subscription = Subscription::all();
@@ -30,7 +30,7 @@ class OrderController extends Controller
                         'subCategory'   =>  $subCategory,
                         'product'       =>  $product,
                         'id_subcategory'=>  $id,
-                        // 'location'      => $request->location
+                        'location'      => $location
                         ]);
     }
    

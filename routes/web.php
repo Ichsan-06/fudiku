@@ -39,7 +39,7 @@ Route::get('/menu/{category}/{location}','MenuController@byCategory')->name('men
 
 
 
-Route::get('/order/{id}','OrderController@index')->name('order');
+Route::get('/order/{location}/{id}','OrderController@index')->name('order');
 Route::post('/schedule','ScheduleController@index')->name('schedule');
 Route::post('/form','FormController@index')->name('form');
 Route::post('/postForm','FormController@post')->name('postForm');

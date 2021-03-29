@@ -82,7 +82,7 @@
                     </div>
                     <div class="menu-cta">
                         {{-- <button type="submit" class="">Langganan</button> --}}
-                        <a href="{{ url("/order/$sub->id") }}" class="btn next">Langganan</a>
+                        <a href="{{ url("/order/$location/$sub->id") }}" class="btn next">Langganan</a>
                     </div>
                 </div>
                 {{-- </form> --}}
