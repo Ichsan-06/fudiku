@@ -19,6 +19,7 @@ class ScheduleController extends Controller
         $subCategory = DB::table('sub_category')->where('id',$request->id_subcategory)->first();
         $product = Product::where('id_sub_category',$request->id_subcategory)
                                 ->where( 'date_delivery', '>', Carbon::now())
+                                ->orderBy('date_delivery','ASC')
                                 ->limit('15')
                                 ->get();
         $subscription = DB::table('subscription')->whereId($request->subscription)->first();
