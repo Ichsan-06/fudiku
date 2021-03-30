@@ -31,18 +31,27 @@
                 <div class="cart-desc">
                     
                     <h5 class="subcategory">{{ $tableOrder->subCat_name }}</h5>
+                    
                     @php
                         if($payment->status == 0){
                             $status = 'Belum Bayar';
+
+                            // use carbon\carbon;
+                            $tgl = $tableOrder->created_at;
+                            $date = \Carbon\Carbon::parse("$tgl")->addHour(24);
+                            $text = "Batas Bayar : ".date('j F, Y H:i',strtotime($date) );
+                             
                         }
                         elseif ($payment->status == 1) {
                             $status = 'Sudah Bayar';
+                            $text = null;
                         }
                         else{
                             $status = 'Dalam Pengiriman';
+                            $text = null;
                         }
                     @endphp
-                    
+                    <h5 style="float: right">{{ $text }}</h5>
                     <h6>Status : {{ $status }}</h6>
                     <h6 class="packet">{{ $tableOrder->subscription_name }} - <span>{{ $tableOrder->duration }} Hari</span></h6>
                     <!-- <h6 class="date">{{ date('D, j F Y',strtotime($tableOrder->tanggal_pesanan) ) }} </h6> -->
