@@ -40,5 +40,43 @@ class TransferController extends Controller
 
         return back()->with('success','Succes Delete Data');
     }
+
+    public function update($id)
+    {
+        $table = DB::table('transfer')->whereId($id)->first();
+        return view('admin.transfer.update',['transfer'=>$table]);
+    }
+
+    public function postUpdate(Request $request)
+    {
+        if($request->hasFile('logo')){
+       
+            
+            
+        $file = $request->file('logo');
+        $nama_file = time()."_".$file->getClientOriginalName();
+        $tujuan_upload = 'img/payment';
+        $file->move($tujuan_upload,$nama_file);
+
+        $categories = DB::table('transfer')
+                    ->where('id',$request->id)
+                    ->update([
+                        'name'      => $request->name,
+                        'no_rekening'      => $request->no_rekening,
+                        'name_rekening'      => $request->name_rekening,
+                        'image'      => $nama_file,
+                    ]);
+        }
+        else{
+            $categories = DB::table('transfer')
+                    ->where('id',$request->id)
+                    ->update([
+                        'name'              => $request->name,
+                        'no_rekening'       => $request->no_rekening,
+                        'name_rekening'     => $request->name_rekening,
+                    ]);
+        }
+        return redirect('admin/transfer')->with('success','Succes Delete Data');    
+    }
     
 }
