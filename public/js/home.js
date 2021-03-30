@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
 });
 
-$(".home-slider").owlCarousel({
+$(".home-banner").owlCarousel({
     loop: true,
     margin: 10,
     nav: false,

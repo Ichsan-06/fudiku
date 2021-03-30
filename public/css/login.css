@@ -72,6 +72,7 @@ body{
         border-radius: 10px;
         height: 50px;
         padding-left: 15px;
+        font-size: 14px;
         border: 2px solid #F0F0F0;
         font-family: 'ChromaticaLight';
     }
@@ -90,7 +91,7 @@ body{
         font-family: 'ChromaticaLight';
     }
     .fudiku-login-user .footer-title{
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
         text-align: center;
         font-size: 14px;
     }
@@ -131,6 +132,7 @@ body{
         border-radius: 10px;
         height: 50px;
         padding-left: 15px;
+        font-size: 14px;
         font-family: 'ChromaticaLight';
         border: 2px solid #EFEFEF;
     }
@@ -199,6 +201,7 @@ body{
         border-radius: 10px;
         height: 50px;
         padding-left: 15px;
+        font-size: 14px;
         border: 2px solid #F0F0F0;
         font-family: 'ChromaticaLight';
     }
@@ -217,7 +220,7 @@ body{
         font-family: 'ChromaticaLight';
     }
     .fudiku-login-user .footer-title{
-        border: 1px solid #000;
+        /* border: 1px solid #000; */
         text-align: center;
         font-size: 14px;
     }
@@ -251,6 +254,7 @@ body{
         border-radius: 10px;
         height: 50px;
         padding-left: 15px;
+        font-size: 14px;
         font-family: 'ChromaticaLight';
         border: 2px solid #EFEFEF;
     }

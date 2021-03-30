@@ -17,7 +17,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="home-text">
-                            <h3 class="title">Anjing</h3> 
+                            <h3 class="title">Solusi makan harianmu</h3> 
                             <p class="body-text">Pesan catering untuk makan siang, makan malam, dan event catering enak, higienis, ga pake ribet.</p>
                             <a href="{{ route('location') }}" class="btn">Aku mau pesan!</a>
                         </div>
