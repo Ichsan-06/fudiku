@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Mar 2021 pada 14.05
+-- Waktu pembuatan: 30 Mar 2021 pada 10.00
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 7.4.15
 
@@ -40,9 +40,9 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`, `slug`, `desc`, `isActive`) VALUES
-(1, 'Single Pax', 'single-pax', 'Makanan Sendiri Santuy', '1'),
-(2, 'Family Pax', 'family-pax', 'Makan Sekeluarga', '1'),
-(3, 'Event Catering', 'event-catering', 'Untuk acara makan bersama', '1');
+(1, 'Single Pax', 'single-pax', 'Satu porsi lauk, sayur, nasi, dan side dish', '1'),
+(2, 'Family Pax', 'family-pax', 'Lauk dan sayur 3-4 porsi, bisa tambah nasi dan side dish', '1'),
+(3, 'Event Catering', 'event-catering', 'Nasi kotak, prasmanan, snacks, dan lainnya', '1');
 
 -- --------------------------------------------------------
 
@@ -128,6 +128,7 @@ CREATE TABLE `model_has_roles` (
 INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (1, 'App\\User', 3),
 (1, 'App\\User', 4),
+(1, 'App\\User', 5),
 (2, 'App\\User', 2);
 
 -- --------------------------------------------------------
@@ -206,7 +207,13 @@ INSERT INTO `order` (`id`, `date_delivery`, `id_customer`, `subcription`, `sub_c
 (138, '1970-01-01', 55, 1, 4, 'x6TKEXUmr3', '2021-03-23 12:51:23', '2021-03-23 12:51:23'),
 (139, '2021-03-27', 56, 1, 4, 'UVxXk817Dt', '2021-03-26 04:44:14', '2021-03-26 04:44:14'),
 (140, '2021-03-28', 56, 1, 4, 'UVxXk817Dt', '2021-03-26 04:44:14', '2021-03-26 04:44:14'),
-(141, '2021-03-29', 56, 1, 4, 'UVxXk817Dt', '2021-03-26 04:44:14', '2021-03-26 04:44:14');
+(141, '2021-03-29', 56, 1, 4, 'UVxXk817Dt', '2021-03-26 04:44:14', '2021-03-26 04:44:14'),
+(142, '2021-03-31', 57, 1, 4, '1qEf4NJR7K', '2021-03-30 07:16:57', '2021-03-30 07:16:57'),
+(143, '2021-04-01', 57, 1, 4, '1qEf4NJR7K', '2021-03-30 07:16:57', '2021-03-30 07:16:57'),
+(144, '2021-04-02', 57, 1, 4, '1qEf4NJR7K', '2021-03-30 07:16:57', '2021-03-30 07:16:57'),
+(145, '2021-04-01', 58, 1, 4, 'UQr9qhnXpL', '2021-03-30 07:48:10', '2021-03-30 07:48:10'),
+(146, '2021-04-03', 58, 1, 4, 'UQr9qhnXpL', '2021-03-30 07:48:10', '2021-03-30 07:48:10'),
+(147, '2021-04-04', 58, 1, 4, 'UQr9qhnXpL', '2021-03-30 07:48:10', '2021-03-30 07:48:10');
 
 -- --------------------------------------------------------
 
@@ -290,7 +297,9 @@ INSERT INTO `payment` (`id`, `code_order`, `transfer`, `payment_date`, `amount`,
 (80, 'uORhH25NLp', 'BCA', '2021-03-23 14:55:45', 42999, '1', '121212134009', 'ahmad basuki', '1616486145_1608624234_WhatsApp Image 2020-12-22 at 14.21.27.jpeg', NULL, '2021-03-23 07:55:15', NULL),
 (81, 'x6TKEXUmr3', 'COD', NULL, 42999, '0', NULL, NULL, NULL, NULL, '2021-03-23 12:51:32', NULL),
 (82, 'x6TKEXUmr3', 'COD', NULL, 42999, '0', NULL, NULL, NULL, NULL, '2021-03-23 12:51:54', NULL),
-(83, 'UVxXk817Dt', 'COD', NULL, 42999, '0', NULL, NULL, NULL, 4, '2021-03-26 04:44:32', NULL);
+(83, 'UVxXk817Dt', 'COD', NULL, 42999, '0', NULL, NULL, NULL, 4, '2021-03-26 04:44:32', NULL),
+(84, '1qEf4NJR7K', 'OVO', '2021-03-30 14:19:34', 42999, '1', '129932480', 'gufron', '1617088774_1608624234_WhatsApp Image 2020-12-22 at 14.21.27.jpeg', NULL, '2021-03-30 07:16:59', NULL),
+(85, 'UQr9qhnXpL', 'COD', NULL, 42999, '2', NULL, NULL, NULL, 5, '2021-03-30 07:48:23', NULL);
 
 -- --------------------------------------------------------
 
@@ -327,12 +336,12 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `date_delivery`, `image`, `id_sub_category`, `created_at`, `updated_at`) VALUES
-(7, 'Ayam Lada Hitam, Tumis Kol, Nasi', '2021-03-28', '1616221700_ayam-ladahitam.JPG', 4, '2021-03-20 06:28:20', '2021-03-25 17:34:17'),
-(8, 'Ayam Cabe Ijo, Tumis Brokoli, Nasi', '2021-03-29', '1616221799_ayam-sambal-ijo.JPG', 4, '2021-03-20 06:29:59', '2021-03-25 17:34:56'),
-(13, 'Ayam Goreng, Tumis Kacang Panjang, Nasi', '2021-03-30', '1616221833_ayam-goreng.JPG', 4, '2021-03-20 06:30:33', '2021-03-25 17:35:06'),
-(14, 'Ayam Semur, Tumis Kacang Panjang, Nasi', '2021-03-31', '1616221856_ayam-semur.JPG', 4, '2021-03-20 06:30:56', '2021-03-25 17:35:20'),
-(15, 'Ampela, Tumis Kangkung, Nasi', '2021-03-27', '1616221420_ampela.JPG', 4, '2021-03-20 06:23:40', '2021-03-25 17:34:00'),
-(17, 'Ayam Sambal, Sayur Gambas Bening, Nasi', '2021-04-01', '1616222459_ayam-sambal.JPG', 4, '2021-03-20 06:40:59', '2021-03-25 17:35:31');
+(7, 'Ayam Lada Hitam, Tumis Kol, Nasi', '2021-04-05', '1617088472_ayam_ladahitam.jpg', 4, '2021-03-30 07:14:32', '2021-03-30 07:14:32'),
+(8, 'Ayam Sambal Ijo, Tumis Brokoli, Nasi', '2021-04-04', '1617088457_ayam_sambal_ijo.jpg', 4, '2021-03-30 07:14:17', '2021-03-30 07:14:17'),
+(13, 'Ayam Goreng, Tumis Kacang Panjang, Nasi', '2021-04-03', '1617088428_ayam_goreng.jpg', 4, '2021-03-30 07:13:48', '2021-03-30 07:13:48'),
+(14, 'Ayam Semur, Tumis Kacang Panjang, Nasi', '2021-04-02', '1617088408_ayam_semur.jpg', 4, '2021-03-30 07:13:28', '2021-03-30 07:13:28'),
+(15, 'Ampela, Tumis Kangkung, Nasi', '2021-04-06', '1617088484_ampela.jpg', 4, '2021-03-30 07:14:44', '2021-03-30 07:14:44'),
+(17, 'Ayam Sambal, Sayur Gambas Bening, Nasi', '2021-04-01', '1617088392_ayam_sambal.jpg', 4, '2021-03-30 07:13:12', '2021-03-30 07:13:12');
 
 -- --------------------------------------------------------
 
@@ -389,7 +398,9 @@ INSERT INTO `profile` (`id`, `full_name`, `email`, `phone`, `kota`, `kabupaten`,
 (53, 'supardi', 'supardi00129@gmail.com', '08134454500082', 'Medan', 'Deli Serdang', 'Percut Sei Tuan', 'jln asdsdsdsd', NULL, '2021-03-22 07:19:36', '2021-03-22 07:19:36'),
 (54, 'ahmad', 'ahmad009@gmail.com', '08221343801943', 'Medan', 'Medan', 'Medan', 'jln duku', NULL, '2021-03-23 07:55:10', '2021-03-23 07:55:10'),
 (55, 'wagimin', 'wagimin0012@gmail.com', '08221343001348', 'Medan', 'Deli Serdang', 'Percut Sei Tuan', 'jln sosro', NULL, '2021-03-23 12:51:23', '2021-03-23 12:51:23'),
-(56, 'dimas', 'dimas12@gmail.com', '8211234001348', 'Medan', 'Deli Serdang', 'Percut Sei Tuan', 'jln titi sewa', 4, '2021-03-26 04:44:14', '2021-03-26 04:44:14');
+(56, 'dimas', 'dimas12@gmail.com', '8211234001348', 'Medan', 'Deli Serdang', 'Percut Sei Tuan', 'jln titi sewa', 4, '2021-03-26 04:44:14', '2021-03-26 04:44:14'),
+(57, 'gufron', 'ridhoadha24@gmail.com', '082223134340', 'Medan', 'Medan', 'Medan', 'jln beruang no1 22', NULL, '2021-03-30 07:16:57', '2021-03-30 07:16:57'),
+(58, 'fery', 'imfabulous1945@gmail.com', '0813434348800', 'Medan', 'Deli Serdang', 'Percut Sei Tuan', 'jln nuri0012', 5, '2021-03-30 07:48:10', '2021-03-30 07:48:10');
 
 -- --------------------------------------------------------
 
@@ -518,7 +529,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `email`, `username`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (2, 'admin@nurihsan.sch.id', 'admin', NULL, '$2y$10$lPNbfOT8sF3JZ43N4Knzi.VEc1YYe5ftHdJoiz88x29ztll0rbNkK', NULL, '2020-12-21 00:29:34', '2020-12-21 00:29:34'),
 (3, '03pinkie@gmail.com', 'Ichsan', NULL, '$2y$10$kgsNAjB94C0EHYE47OwfaORu2X78s.WbcBMiMmLofG46oXpstBy3W', NULL, '2020-12-22 22:07:13', '2020-12-22 22:07:13'),
-(4, 'dimas12@gmail.com', 'dimas', NULL, '$2y$10$CrL.pyIg.wE473JyRQxF7O6eqXLpT6R0Fh7Nk5lF6IvUwFVKQgxN2', NULL, '2021-03-25 15:13:12', '2021-03-25 15:13:12');
+(4, 'dimas12@gmail.com', 'dimas', NULL, '$2y$10$CrL.pyIg.wE473JyRQxF7O6eqXLpT6R0Fh7Nk5lF6IvUwFVKQgxN2', NULL, '2021-03-25 15:13:12', '2021-03-25 15:13:12'),
+(5, 'imfabulous1945@gmail.com', 'saiful', NULL, '$2y$10$69Cy3YcNYMUjgD.Vad150uR4egPV3yAfCQHkMAA0yhry3Dd5QQfKW', NULL, '2021-03-30 07:22:22', '2021-03-30 07:22:22');
 
 --
 -- Indexes for dumped tables
@@ -657,13 +669,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 
 --
 -- AUTO_INCREMENT untuk tabel `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT untuk tabel `permissions`
@@ -681,7 +693,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT untuk tabel `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT untuk tabel `roles`
@@ -711,7 +723,7 @@ ALTER TABLE `transfer`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
