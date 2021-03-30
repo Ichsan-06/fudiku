@@ -16,7 +16,7 @@
                             data-multiple-dates="{{ $tb_subscription->duration }}"
                             data-multiple-dates-separator=","
                             ></div>
-                            <input type="hidden" name="tanggal" id="tanggal">
+                            <input type="text" name="tanggal" id="tanggal" required style="display:none;">
                             <input type="hidden" name="id_subcategory" value="{{ $subCategory->id }}">
                             <input type="hidden" name="id_subscription" value="{{ $id_subscription }}">
                             <input type="hidden" name="location" value="{{ $location }}">

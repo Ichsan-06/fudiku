@@ -22,11 +22,22 @@ class CartController extends Controller
                                 ->where('id_user',$idUser)
                                 ->orderBY('created_at','DESC')
                                 ->get();
-
-            // var_dump($table_payment);
-            return view('cart.index',[
-                'table_payment'   => $table_payment
-            ]);
+            $count = DB::table('payment')
+                                ->where('id_user',$idUser)
+                                ->orderBY('created_at','DESC')
+                                ->count();
+            if($count > 0){
+                return view('cart.index',[
+                    'table_payment'   => $table_payment
+                ]);
+            }
+            else{
+                return view('cart.null',[
+                    'table_payment'   => $table_payment
+                ]);
+            }
+            
+            
         }
         else{
             return view('cart.notLogin');
