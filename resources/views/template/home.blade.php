@@ -82,39 +82,31 @@
       <div class="collapse navbar-collapse" id="mobile-collapse" >
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link" data-target="">About</a>
+            <a href="{{ route('about') }}" class="nav-link" data-target="">About</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" data-target="">Contact</a>
+            <a href="{{ route('contact') }}" class="nav-link" data-target="">Contact</a>
           </li>
           @guest
-              <!-- <form action="{{ route('login') }}" class="form-inline">
-                <button class="btn login bg-light">{{ __('Masuk') }}</button>
-              </form> -->
-              <a href="{{ route('login') }}" class="btn login ">{{ __('Masuk') }}</a> 
-              @if (Route::has('register'))
-                <!-- <form action="{{ route('register') }}" class="form-inline">
-                  <button class="btn login bg-primary">{{ __('Daftar') }}</button>
-                </form> -->
-                <a href="{{ route('login') }}" class="btn register ">{{ __('Daftar') }}</a> 
-              @endif
-              @else
-              <li class="nav-item dropdown">
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="user">
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                          document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-                        </form>
-                    </div>
-                </li>
-                <li class="nav-item">
-                  
-              </li>
-            @endguest
+                <a href="{{ route('login') }}" class="btn login ">{{ __('Masuk') }}</a> 
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="btn register ">{{ __('Daftar') }}</a> 
+                    @endif
+
+                    @else
+                        <a class="btn login" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                
+                
+                @endguest
+          
+              
         </ul>
       </div>
     </div>		

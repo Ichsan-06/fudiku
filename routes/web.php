@@ -62,10 +62,14 @@ Route::get('/payment/confirm','PaymentController@confirm')->name('payment.confir
 Route::get('/finish','FinishController@index')->name('finish');
 
 Route::get('/profile','ProfileController@index')->name('profile');
+Route::get('/profile/edit','ProfileController@edit')->name('profile.edit');
 
 Route::get('/cart','CartController@index')->name('cart');
 Route::get('/cart/detail','CartController@detail')->name('cart.detail');
-Route::get('/summary','SummaryController@index');
+
+Route::get('/about','AboutController@index')->name('about');
+
+Route::get('/contact','ContactController@index')->name('contact');
 
 Auth::routes();
 

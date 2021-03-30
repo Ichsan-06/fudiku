@@ -27,7 +27,7 @@
                                 $tgl = $table->created_at;
                                 $date = Carbon::parse("$tgl")->addHour(24);
                             @endphp
-                            <small>{{ date('d, j F Y',strtotime($date) ) }} WIB</small>
+                            <small>{{ date('j F, Y',strtotime($date) ) }}</small>
                         </div>
                         <div class="detail-info">
                             <h6><strong>Tranfer Via</strong></h6>

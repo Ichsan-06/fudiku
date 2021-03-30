@@ -26,7 +26,7 @@
                         <div class="schedule-menu">
                             <div class="schedule-title">
                                 <h3 class="title">{{ $subCategory->name }}</h3>
-                                <p class="subtitle">{{ $subCategory->information }}</p>
+                                <span class="subtitle">{{ $subCategory->information }}</span>
                             </div>
                             <div class="schedule-menu-item owl-carousel owl-theme">
                                 @foreach ($product as $products)

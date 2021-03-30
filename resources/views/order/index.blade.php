@@ -38,7 +38,7 @@
                         <div class="order-menu">
                             <div class="menu-title">
                                 <h3 class="title">{{ $subCategory->name }}</h3>
-                                <p class="subtitle">{{ $subCategory->information }}</p>
+                                <span class="subtitle">{{ $subCategory->information }}</span>
                             </div>
                             <div class="order-menu-item owl-carousel owl-theme">
                                 @foreach ($product as $products)

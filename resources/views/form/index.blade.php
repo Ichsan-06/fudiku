@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <!-- <label for="">Email</label> -->
-                        <input type="email" class="form-control"  placeholder="Email" name="email" autocomplete="off" required value="{{ $email }}" <?php if ($email != null) echo "disabled" ?>>
+                        <input type="email" class="form-control"  placeholder="Email" name="email" autocomplete="off" required value="{{ $email }}" <?php if ($email != null) echo "" ?>>
                     </div>
 
                     <div class="form-row">

@@ -16,8 +16,8 @@
                     <h5 class="name">{{ Auth::user()->username }}</h5>
                 </div>
                 <div class="profile-edit">
-                    <form action="">
-                        {{-- <button class="btn">Edit Profile</button> --}}
+                    <form action="{{ route('profile.edit') }}">
+                        <button class="btn">Edit Profile</button>
                     </form>
                 </div>
                 

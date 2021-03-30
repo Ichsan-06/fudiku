@@ -166,7 +166,7 @@ button:focus{
 }
 .fudiku-packet-area{
     position: relative;
-    padding: 2.5rem 0rem;
+    padding: 2.5rem 0rem 0rem 0rem;
     margin: 0.5rem 0rem;
     background-color: #FFF;
 }
@@ -180,7 +180,8 @@ button:focus{
     margin-top: 1.25rem;
 }
 .fudiku-packet-area .packet{
-
+    margin-bottom: 2.5rem;
+    text-align: center;
 }
 .fudiku-packet-area .packet-img{
     position: relative;
@@ -853,7 +854,10 @@ button:focus{
     padding: 1.5rem 0rem ;
     margin: .5rem 0rem 0rem 0rem;
     background-color: #FFF;
-    /* border: 1px solid #000; */
+    border: 1px solid #000;
+}
+.fudiku-cod-area .cod-content{
+    border: 1px solid #000;
 }
 .fudiku-cod-area .cod-img{
     height: 400px;
@@ -887,11 +891,12 @@ button:focus{
 }
 .fudiku-profile-area{
     position: relative;
-    padding: 1.5rem 0rem 10rem 0rem;
+    padding: 1.5rem 0rem;
     margin: .5rem 0rem 0rem 0rem;
     background-color: #FFFF;
 }
 .fudiku-profile-area .profile-content{
+    /* border: 1px solid #000; */
 }
 .fudiku-profile-area .profile{
     text-align: center;
@@ -935,7 +940,11 @@ button:focus{
     margin-bottom: 1.25rem;
 }
 .fudiku-profile-area .profile-edit .btn{
-
+    padding: 12px;
+    width: 150px;
+    border: 2px solid #EB484E;
+    color: #F03A40;
+    border-radius: 10px;
 }
 .fudiku-profile-area .profile-detail-info .detail-info{
     margin-bottom: 1.5rem;
@@ -1006,9 +1015,63 @@ button:focus{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
     color: #FFF;
 }
+.fudiku-profile-edit-area{
+    position: relative;
+    padding: 1.5rem 0rem;
+    margin: .5rem 0rem 0rem 0rem;
+    background-color: #FFFF;
+
+}
+.fudiku-profile-edit-area .profile-edit-form{
+    /* border: 1px solid #000; */
+}
+.fudiku-profile-edit-area .profile-edit-img{
+    /* border: 1px solid #000; */
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #EFEFEF;
+    margin-bottom: 1.25rem;
+}
+.fudiku-profile-edit-area .profile-edit-img:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 0;
+}
+.fudiku-profile-edit-area .profile-edit-img label{
+    position: relative;
+    z-index: 1;
+}
+.fudiku-profile-edit-area .profile-edit-form .form-group{
+    margin-bottom: 1.25rem;
+}
+.fudiku-profile-edit-area .profile-edit-form .form-control{
+    border: 2px solid #EFEFEF;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 14px;
+    padding-left: 15px;
+}
+.fudiku-profile-edit-area .profile-edit-form .btn{
+    background-image: linear-gradient(180deg,#F03A40,#EB484E);
+    border-color: #F03A40;
+    color: #FFF;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+}
 .fudiku-finish-area{
     position: relative;
-    padding: 2.5rem 0rem 13rem 0rem;
+    padding: 1.5rem 0rem;
     margin: .5rem 0rem 0rem 0rem;
     background-color: #FFFF;
 
@@ -1562,13 +1625,6 @@ button:focus{
     .fudiku-feature-area .feature-content .col-md-3{
         max-width: 50%;
     }
-    .fudiku-packet-area .packet{
-        margin-bottom: 2.25rem;
-        text-align: center;
-    }
-    .fudiku-packet-area .packet .packet-category{
-        text-align: center;
-    }
     .fudiku-location-area .location-form{
         position: absolute;
         width: 100%;
@@ -1623,6 +1679,7 @@ button:focus{
     .fudiku-cart-empty-area,
     .fudiku-profile-area,
     .fudiku-profile-blank-area,
+    .fudiku-profile-edit-area,
     .fudiku-cod-area{
         height: 664px;
         /* border: 1px solid #000; */

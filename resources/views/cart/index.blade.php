@@ -43,7 +43,7 @@
                         }
                     @endphp
                     
-                    <h3>Status : {{ $status }}</h3>
+                    <h6>Status : {{ $status }}</h6>
                     <h6 class="packet">{{ $tableOrder->subscription_name }} - <span>{{ $tableOrder->duration }} Hari</span></h6>
                     <!-- <h6 class="date">{{ date('D, j F Y',strtotime($tableOrder->tanggal_pesanan) ) }} </h6> -->
                     <h5 class="price">Rp.{{ getPrice($payment->amount) }}</h5>

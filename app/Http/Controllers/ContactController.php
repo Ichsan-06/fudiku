@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
-class ProfileController extends Controller
+
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,15 +13,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        if(Auth::check()) 
-        {
-            return view('profile.index');
-        }
-        else{
-            return view('profile.notLogin');
-        }
-        
-        
+        //
+        return view('contact.index');
     }
 
     /**
@@ -62,10 +55,9 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
         //
-        return view('profile.edit');
     }
 
     /**
