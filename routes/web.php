@@ -104,6 +104,7 @@ Route::middleware('role:admin')->group(function () {
         Route::post('/admin/tambahSubscription','SubscriptionController@create')->name('tambahSubscription');
         Route::get('/admin/updateSubscription/{id}','SubscriptionController@update');
         Route::post('/admin/storeSubscription/','SubscriptionController@store');
+        Route::get('/admin/deleteSubscription/{id}','SubscriptionController@destroy');
 
         Route::get('/admin/customer','CustomerController@index')->name('customer');
         // Route::post('/admin/tambahSubcription','CustomerController@create')->name('tambahSubcription');
@@ -120,7 +121,10 @@ Route::middleware('role:admin')->group(function () {
 
         Route::get('/admin/transfer','TransferController@index')->name('transfer');
         Route::post('/admin/postTransfer','TransferController@post')->name('postTransfer');
-        // Route::post('/admin/updateMap/{id}','MapController@update');
+        Route::get('/admin/deleteTransfer/{id}','TransferController@delete');
+
+
+        Route::post('/admin/updateMap/{id}','MapController@update');
         // Route::get('/admin/deleteMap/{id}','MapController@delete');
 
         Route::get('/admin/ordering','OrderingController@index')->name('ordering');

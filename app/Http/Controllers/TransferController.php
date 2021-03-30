@@ -33,5 +33,12 @@ class TransferController extends Controller
 
         return back()->with('success','Succes Insert Data');
     }
+
+    public function delete($id)
+    {
+        $transfer = DB::table('transfer')->whereId($id)->delete();
+
+        return back()->with('success','Succes Delete Data');
+    }
     
 }

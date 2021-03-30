@@ -59,8 +59,8 @@
                         <td scope="row">{{ $data->no_rekening }}</td>                                    
                         <td scope="row">{{ $data->name_rekening }}</td>                                    
                         <td scope="row">
-                        <a href='{{ url("admin/deleteProduct/$data->id") }}' class="btn btn-danger btn-sm">Delete</a>
-                        <a href='{{ url("admin/updateProduct/$data->id") }}' class="btn btn-info btn-sm">Update</a>
+                        <a href='{{ url("admin/deleteTransfer/$data->id") }}' class="btn btn-danger btn-sm">Delete</a>
+                        <button href='' class="btn updateBtn btn-sm btn-info" data-id="{{ $data->id }}">Update</button>
                         </td>
                     </tr>
                 @endforeach
@@ -107,4 +107,92 @@
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="editFormKategori" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="id" id='id'>
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="text" name="name" id='name' class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nomor Rekening</label>
+                        <input type="text" name="no_rekening" id="no_rekening" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Atas Nama</label>
+                        <input type="text" name="name_rekening" id="atas_nama" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Logo</label><br>
+                        <input type="file" name="logo" id="logo" class="form-control">
+                        <i>*isi jika mau diupdate</i>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endsection
+
+
+@section('script')
+    <script>
+        $(document).ready(function(){
+            $('.updateBtn').click(function(){
+                $('.modal-title').text('Update Data')
+                $('#updateModal').modal('show');
+                
+                $tr = $(this).closest('tr');
+
+                var data = $tr.children('td').map(function(){
+                    return $(this).text();
+                }).get();
+
+                var dataId = $(this).attr('data-id');
+
+
+                $('#name').val(data[0]);
+                $('#no_rekening').val(data[1]);
+                $('#atas_nama').val(dataId);
+                $('#id').val(dataId);
+                
+            });  
+        });
+        
+        // $('#editFormKategori').on('submit',function(e){
+        //     e.preventDefault();
+        //     var id = $('#id').val();
+
+        //     $.ajax({
+        //         type:'POST',
+        //         url : '/admin/updateCategory/'+id,
+        //         data:$('#editFormKategori').serialize(),
+        //         success:function(response){
+        //             console.log(response);
+        //             $('#updateModal').modal('hide');
+        //             window.location.reload();
+        //         },
+        //         error:function(error){
+        //             console.id(id)
+        //         } 
+        //     });
+        // })
+    </script>
 @endsection

@@ -108,8 +108,9 @@ class SubscriptionController extends Controller
      * @param  \App\Subscription  $subscription
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Subscription $subscription)
+    public function destroy($id)
     {
-        //
+        Subscription::whereId($id)->delete();
+        return redirect('admin/subscription')->with('success','Succes Delete Data');
     }
 }

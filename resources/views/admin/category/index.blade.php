@@ -113,6 +113,9 @@
                     <div class="form-group">
                         <input type="text" name="slug" id="slug" class="form-control" placeholder="Slug">
                     </div>
+                    <div class="form-group">
+                        <input type="text" name="desc" id="desc" class="form-control" placeholder="Description">
+                    </div>
                 </div>
                 
                 <div class="modal-footer">
@@ -140,13 +143,15 @@
                 var data = $tr.children('td').map(function(){
                     return $(this).text();
                 }).get();
+
                 var dataId = $(this).attr('data-id');
 
 
-                $('#name').val(data[0]);
-                $('#slug').val(data[1]);
-                $('#desc').val(data[2]);
+                $('#name').val(data[1]);
+                $('#slug').val(data[2]);
+                $('#desc').val(data[3]);
                 $('#id').val(dataId);
+                
             });  
             
 
@@ -191,7 +196,7 @@
                     window.location.reload();
                 },
                 error:function(error){
-                    console.log(error);
+                    console.id(id)
                 } 
             });
         })

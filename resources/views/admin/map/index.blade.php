@@ -113,10 +113,10 @@
                 @csrf
                 <div class="modal-body">
                     <div class="form-group">
-                        <input type="text" name="kabupaten" class="form-control" placeholder="Kabupaten">
+                        <input type="text" name="kabupaten" id="kabupaten" class="form-control" placeholder="Kabupaten">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="kecamatan" class="form-control" placeholder="Kecamatan">
+                        <input type="text" name="kecamatan" id="kecamatan" class="form-control" placeholder="Kecamatan">
                     </div>                    
                 </div>
                 
@@ -140,15 +140,18 @@
                 
                 $tr = $(this).closest('tr');
 
-                // var data = $tr.children('td').map(function(){
-                //     return $(this).text();
-                // }).get();
+                var data = $tr.children('td').map(function(){
+                    return $(this).text();
+                }).get();
+
                 var dataId = $(this).attr('data-id');
-                var dataName = $(this).attr('data-name');
+                // var dataName = $(this).attr('data-name');
 
 
-                $('#location').val(dataName);
+                $('#kabupaten').val(data[0]);
+                $('#kecamatan').val(data[1]);
                 $('#id').val(dataId);
+
             });  
         });
         

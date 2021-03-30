@@ -23,7 +23,9 @@ class MapController extends Controller
     public function update(Request $request, $id)
     {
         $data = DB::table('map')->whereId($id)->update([
-            'location'=>$request->location,
+            'kabupaten'=>$request->kabupaten,
+            'kecamatan'=>$request->kecamatan,
+            
         ]);
         return back()->with('success','Succes Insert Data');   
     }

@@ -107,6 +107,7 @@ class CategoryController extends Controller
                     ->update([
                         'name'=> $request->input('name'),
                         'slug'=> $request->input('slug'),
+                        'desc'=> $request->input('desc'),
                         ]);
 
 
