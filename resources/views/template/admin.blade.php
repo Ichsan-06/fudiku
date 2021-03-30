@@ -78,8 +78,8 @@
         <button class="btn toggle" id="menu-toggle"><i class="icofont-navigation-menu"></i></button>
         <form method="GET" action="" class="navbar-search">
           <div class="form-search">
-            <i class="icofont-search-1"></i>
             <input type="text" class="form-control" placeholder="Cari" name="">
+            <button class="btn"><i class="icofont-search-1"></i></button>
           </div>
         </form>
         <ul class="navbar-nav ml-auto">
