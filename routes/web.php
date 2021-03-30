@@ -122,6 +122,8 @@ Route::middleware('role:admin')->group(function () {
         Route::get('/admin/transfer','TransferController@index')->name('transfer');
         Route::post('/admin/postTransfer','TransferController@post')->name('postTransfer');
         Route::get('/admin/deleteTransfer/{id}','TransferController@delete');
+        Route::get('/admin/updateTransfer/{id}','TransferController@update');
+        Route::post('/admin/postUpdateTransfer/','TransferController@postUpdate');
 
 
         Route::post('/admin/updateMap/{id}','MapController@update');
