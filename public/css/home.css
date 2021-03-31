@@ -362,7 +362,7 @@ button:focus{
 }
 .fudiku-location-area .location-img{
     width: 50%;
-    /* border: 1px solid #000; */
+    border: 1px solid #000;
 }
 .fudiku-location-area .location-img img{
     object-fit: contain;
@@ -728,8 +728,6 @@ button:focus{
     box-shadow: none;
     border: 2px solid #EB484E;
 }
-.fudiku-form-area .form-area select{
-}
 .fudiku-form-area .form-area textarea{
     height: 130px;
 }
@@ -854,10 +852,10 @@ button:focus{
     padding: 1.5rem 0rem ;
     margin: .5rem 0rem 0rem 0rem;
     background-color: #FFF;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 .fudiku-cod-area .cod-content{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 .fudiku-cod-area .cod-img{
     height: 400px;

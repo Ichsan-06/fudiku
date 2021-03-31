@@ -33,7 +33,7 @@ class MenuController extends Controller
                         ->where('isActive','1')
                         ->where('parentId',$getIdCategories->id)
                         ->get();
-        $count = DB::table('sub_category')
+                        $count = DB::table('sub_category')
                         ->where('isActive','1')
                         ->where('parentId',$getIdCategories->id)
                         ->count();
