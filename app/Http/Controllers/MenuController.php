@@ -52,6 +52,42 @@ class MenuController extends Controller
                 ]);
             }
     }
+    public function search(Request $request)
+    {
+        
+        // $this->cekLocation($location);
+        // //
+        $categories = DB::table('category')
+                        ->where('isActive','1')
+                        ->orderByRaw('id ASC')
+                        ->get();
+        $getIdCategories = DB::table('category')
+                        ->where('isActive','1')
+                        ->orderByRaw('id ASC')
+                        ->first();
+        $subCategory = DB::table('sub_category')
+                        ->where('isActive','1')
+                        ->where('parentId',$getIdCategories->id)
+                        ->get();
+                        $count = DB::table('sub_category')
+                        ->where('isActive','1')
+                        ->where('parentId',$getIdCategories->id)
+                        ->count();
+        $map = DB::table('map')->where('kabupaten',$request->location)->count();
+        
+        if($map == 0){
+            return view(404);
+        }
+        else{
+        return view('menu.index',[
+                'categories'=> $categories,
+                'sub_category'=> $subCategory,
+                'slug'      => '',
+                'location'  => $request->location,
+                'count'     => $count
+                ]);
+            }
+    }
     public function byCategory($slug,$location)
     {
         $catBySlug = DB::table('category')->where('slug',$slug)->first();

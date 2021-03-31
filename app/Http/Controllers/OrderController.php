@@ -22,6 +22,7 @@ class OrderController extends Controller
         $subCategory = DB::table('sub_category')->where('id',$id)->first();
         $product = Product::where('id_sub_category',$id)
                                 ->where( 'date_delivery', '>', Carbon::now())
+                                ->orderBy('date_delivery','ASC')
                                 ->limit(15)
                                 ->get();
         // dd($request->all());

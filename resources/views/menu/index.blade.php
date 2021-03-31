@@ -5,12 +5,15 @@
 @section('main')
 <div class="fudiku-search-area">
     <div class="search-content">
-        <div class="fudiku-search">
-            <div class="form-field">
-                <input type="text" class="form-control" value="{{ $location }}">
-                <button class="btn"><i class="icofont-search"></i></button>
+        <form action="{{ url('/menu/search') }}" method="POST">
+            @csrf
+            <div class="fudiku-search">
+                <div class="form-field">
+                    <input type="text" class="form-control" value="{{ $location }}" name="location">
+                    <button type="submit" class="btn"><i class="icofont-search"></i></button>
+                </div>
             </div>
-        </div>
+        </form>
         <div class="fudiku-category">
             <ul class="nav">
                 @foreach($categories as $category)
