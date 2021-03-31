@@ -25,8 +25,10 @@
                 </div>
             </form>
         </div>
-        <div class="location-img">
-            <img src="{{ asset('img/vector/map.png') }}" alt="">
+        <div class="location-img-area">
+            <div class="location-img">
+                <img src="{{ asset('img/vector/map.png') }}" alt="">
+            </div>
         </div>
     </div>
     

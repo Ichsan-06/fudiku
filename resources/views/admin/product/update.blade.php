@@ -4,7 +4,7 @@
 
 @section('main')
 
-@section('breadcrumb')
+@section('main-heading')
 
 <div class="breadcrumb">
     <li class="breadcrumb-item">Dashboard</li>
