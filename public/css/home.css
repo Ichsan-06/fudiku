@@ -362,7 +362,7 @@ button:focus{
 }
 .fudiku-location-area .location-img{
     width: 50%;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 .fudiku-location-area .location-img img{
     object-fit: contain;
@@ -400,6 +400,9 @@ button:focus{
 .fudiku-menu-area .menu-item{
     height: 220px;
 }
+.fudiku-menu-area .menu-item a{
+    text-decoration: none;
+}
 .fudiku-menu-area .menu .menu-img{
     overflow: hidden;
     border-radius: 10px;
@@ -415,10 +418,12 @@ button:focus{
 }
 .fudiku-menu-area .menu .menu-desc .date{
     font-size: 12px;
+    color: #555;
 }
 .fudiku-menu-area .menu .menu-desc .menu-name{
     font-family: 'ChromaticaBold';
     font-size: 14px;
+    color: #000;
 }
 .fudiku-menu-area .menu-cta .btn{
     font-family: 'ChromaticaLight';
@@ -442,7 +447,7 @@ button:focus{
 }
 .fudiku-not-available-area .not-available-img{
     width: 100%;
-    height: 409px;
+    height: 400px;
     /* border: 1px solid #000; */
     margin: auto auto 1.25rem auto;
 }
@@ -1361,7 +1366,7 @@ button:focus{
         position: relative;
         background-color: #FFF;
         margin-bottom: 0.5rem;
-        padding: 1.5rem;
+        padding: 1.5rem 0rem;
     }
     .fudiku-search-area .search-content{
         display: flex;
@@ -1556,7 +1561,7 @@ button:focus{
     .fudiku-search-area{
         position: relative; 
         background-color: #FFF;
-        padding: 1rem;
+        padding: 1.5rem 1rem;
         margin-bottom: 0.5rem;
     }
     .fudiku-search-area .fudiku-search{
@@ -1603,6 +1608,7 @@ button:focus{
         border-radius: 10px;
         border: 2px solid #EFEFEF;
     }
+    
     .fudiku-delivery-area{
         background-color: #FFF;
         padding: 1.5rem 0rem;
@@ -1650,7 +1656,7 @@ button:focus{
     }
     .fudiku-location-area .location-img{
         width: 100%;
-        height: 492px;
+        height: 400px;
         /* border: 1px solid #000; */
     }
     .fudiku-location-area .location-img img{
@@ -1686,6 +1692,7 @@ button:focus{
     .fudiku-profile-area,
     .fudiku-profile-blank-area,
     .fudiku-profile-edit-area,
+    .fudiku-finish-area,
     .fudiku-cod-area{
         height: 664px;
         /* border: 1px solid #000; */
