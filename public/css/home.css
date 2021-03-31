@@ -1382,11 +1382,15 @@ button:focus{
         border: 2px solid #F1F2F0;
         /* box-shadow: 0 2px 4px rgb(15 34 58 / 12%); */
     }
-    .fudiku-search-area .fudiku-search .form-field i{
+    .fudiku-search-area .fudiku-search .form-field .btn{
         position: absolute;
-        top: 1rem;
-        right: 1rem;
-        color: #000;
+        top: 5px;
+        right: 5px;
+        padding: 6px 12px;
+        border-radius: 10px;
+        /* border: 1px solid #000; */
+        background-image: linear-gradient(180deg,#F03A40,#EB484E);
+        color: #FFF;
     }
     .fudiku-search-area .fudiku-category{
         width: 40%;
@@ -1567,11 +1571,15 @@ button:focus{
         border-radius: 10px;
         /* border: 1px solid #000; */
     }
-    .fudiku-search-area .fudiku-search .form-field i{
+    .fudiku-search-area .fudiku-search .form-field .btn{
         position: absolute;
-        top: 1rem;
-        right: 1rem;
-        color: #000;
+        top: 5px;
+        right: 5px;
+        padding: 6px 12px;
+        border-radius: 10px;
+        /* border: 1px solid #000; */
+        background-image: linear-gradient(180deg,#F03A40,#EB484E);
+        color: #FFF;
     }
     .fudiku-search-area .fudiku-category{
         margin-top: 1rem;

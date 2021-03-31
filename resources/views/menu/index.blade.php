@@ -7,8 +7,8 @@
     <div class="search-content">
         <div class="fudiku-search">
             <div class="form-field">
-                <i class="icofont-rounded-down"></i></button>
                 <input type="text" class="form-control" value="{{ $location }}">
+                <button class="btn"><i class="icofont-search"></i></button>
             </div>
         </div>
         <div class="fudiku-category">
@@ -69,14 +69,16 @@
                     </div>
                     <div class="menu owl-carousel owl-theme">
                         @foreach($product as $products)
-                        <div class="menu-item">
-                                <div class="menu-img">
-                                    <img src='{{ asset("img/product/$products->image") }}' alt="">
-                                </div>
-                                <div class="menu-desc">
-                                    <span class="date">{{$products->date_delivery->isoFormat('dddd, D MMMM Y') }}</span>
-                                    <p class="menu-name">{{$products->name }}</p>
-                                </div>
+                            <div class="menu-item">
+                                <a href="">
+                                    <div class="menu-img">
+                                        <img src='{{ asset("img/product/$products->image") }}' alt="">
+                                    </div>
+                                    <div class="menu-desc">
+                                        <span class="date">{{$products->date_delivery->isoFormat('dddd, D MMMM Y') }}</span>
+                                        <p class="menu-name">{{$products->name }}</p>
+                                    </div>
+                                </a>
                             </div>
                         @endforeach
                     </div>
