@@ -161,3 +161,5 @@ $(".cart-menu").owlCarousel({
 $(document).ready(function(){
     $('select').niceSelect();
 });
+
+$('.dropzone').dropzone({ url: "/file/post" });

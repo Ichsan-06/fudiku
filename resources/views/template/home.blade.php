@@ -6,6 +6,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.css') }} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/animate.css') }} ">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/dropzone.css') }} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/icofont.css') }} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/flaticon.css') }} ">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/owl.carousel.css') }} ">
@@ -189,6 +190,7 @@
 <script type="text/javascript" src="{{ asset('/js/owl.carousel.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/datepicker.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/datepicker.en.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/dropzone.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/jquery.nice-select.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/js/home.js') }}"></script>
 @yield('script')

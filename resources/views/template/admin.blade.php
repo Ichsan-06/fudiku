@@ -33,7 +33,7 @@
     <div class="sidebar-menu">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="{{ route('dashboard') }} " class="nav-link {{ request()->path() == 'admin' || request()->path() == 'admin' ? 'active' : ''}}"><i class="icofont-pie-chart"></i> Dashboard</a>
+          <a href="" class="nav-link {{ request()->path() == 'dashboard' || request()->path() == 'admin' ? 'active' : ''}}"><i class="icofont-pie-chart"></i> Dashboard</a>
         </li>
         
         {{-- <a href="{{ route('cus') }}" class="nav-link"> User</a> --}}
