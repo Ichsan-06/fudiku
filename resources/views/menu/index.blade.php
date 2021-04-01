@@ -62,6 +62,7 @@
                 @php
                     $product = App\Product::where('id_sub_category',$sub->id)
                     ->where( 'date_delivery', '>', \Carbon\Carbon::now())
+                    ->orderBy('date_delivery','ASC')
                     ->limit(15)
                     ->get();                    
                 @endphp
