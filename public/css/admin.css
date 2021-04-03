@@ -90,7 +90,6 @@ body {
 .main-nav .navbar-search .form-search{
   position: relative;
 }
-
 .main-nav .navbar-search input{
   border-color: #EFEFEF;
   border-radius: 10px;
@@ -218,9 +217,14 @@ body {
     flex-direction: row;
 
   }
-  .main-nav .navbar-nav .nav-link{
-    
+  .main-nav .nav-link{
+    width: 40px;
+    height: 40px; 
+    background-color: #F0F0F0;
+    border-radius: 50%;
+    text-align: center;
   }
+
   .main-nav .navbar-nav .dropdown-menu{
     position: absolute;
   }

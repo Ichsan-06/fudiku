@@ -17,8 +17,8 @@
         <div class="fudiku-category">
             <ul class="nav">
                 @foreach($categories as $category)
-                <li class="nav-item">
-                    <a href="{{ url("menu/$category->slug/$location") }}" class="nav-link" >{{ $category->name}}</a>
+                <li class="nav-item active">
+                    <a href="{{ url("menu/$category->slug/$location") }}" class="nav-link">{{ $category->name}}</a>
                 </li>                                    
                 @endforeach   
             </ul>
@@ -74,7 +74,7 @@
                     <div class="menu owl-carousel owl-theme">
                         @foreach($product as $products)
                             <div class="menu-item">
-                                <a href="">
+                                <a href="" data-toggle="modal" data-target="#menu-popup">
                                     <div class="menu-img">
                                         <img src='{{ asset("img/product/$products->image") }}' alt="">
                                     </div>
@@ -82,15 +82,43 @@
                                         <span class="date">{{$products->date_delivery->isoFormat('dddd, D MMMM Y') }}</span>
                                         <p class="menu-name">{{$products->name }}</p>
                                     </div>
+                                    
                                 </a>
+                                
                             </div>
+                            
                         @endforeach
+                        
+                    </div>
+                    <div class="menu-popup">
+                        <div class="modal fade " id="menu-popup" tabindex="-1" aria-labelledby="menu-popup" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content menu-popup-content">
+                                <div class="modal-header menu-popup-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><i class="icofont-close"></i></span>
+                                    </button>
+                                </div>
+                                <div class="menu-popup-img">
+                                    <img src="{{ asset('img/menu/ampela.jpg') }}" alt="">
+                                </div>
+                                <div class="menu-popup-desc">
+                                    <small class="date">Senin, 5 April 2021</small>
+                                    <p class="info">Gurami goreng, brokoli, Rolled Omelet dengan citarasa sederhana ala masakan rumah</p>
+                                </div>
+                                <!-- <div class="modal-body menu-popup-item">
+                                </div> -->
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="menu-cta">
                         {{-- <button type="submit" class="">Langganan</button> --}}
                         <a href="{{ url("/order/$location/$sub->id") }}" class="btn next">Langganan</a>
                     </div>
                 </div>
+                
                 {{-- </form> --}}
                 
     </div>

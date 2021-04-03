@@ -417,6 +417,34 @@ button:focus{
     font-size: 14px;
     color: #000;
 }
+.fudiku-menu-area .menu-popup .menu-popup-content{
+    border: none;
+    border-radius: 10px;
+}
+.fudiku-menu-area .menu-popup .menu-popup-header{
+    border-bottom: none;
+}
+.fudiku-menu-area .menu-popup .menu-popup-img{
+    width: 100% ;
+}
+.fudiku-menu-area .menu-popup .menu-popup-img img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    
+}
+.fudiku-menu-area .menu-popup .menu-popup-desc{
+    padding: 15px;
+}
+.fudiku-menu-area .menu-popup .menu-popup-desc .date{
+    color: #555;
+}
+.fudiku-menu-area .menu-popup .menu-popup-desc .info{
+    font-family: 'ChromaticaBold';
+}
+.fudiku-menu-area .menu-cta{
+
+}
 .fudiku-menu-area .menu-cta .btn{
     font-family: 'ChromaticaLight';
     padding: 12px;
@@ -1436,16 +1464,21 @@ button:focus{
     .fudiku-search-area .fudiku-category .nav-item{
         margin-left: 5px;
     }
+    .fudiku-search-area .fudiku-category .nav-item.active .nav-link{
+        background-color: #EB484E;
+        color: #FFF;
+    }
+    .fudiku-search-area .fudiku-category .nav-link{
+        border-radius: 10px;
+        /* border-color: #5A5A5A; */
+        /* border: 2px solid #F1F2F0; */
+        color: #555;
+        padding: 10px 15px;
+    }
     .fudiku-delivery-area{
         background-color: #FFF;
         padding: 1.5rem 0rem;
         margin-bottom: .5rem;
-    }
-    .fudiku-search-area .fudiku-category .nav-link{
-        border-radius: 10px;
-        border: 2px solid #F1F2F0;
-        color: #555;
-        padding: 10px 15px;
     }
     .fudiku-location-area .location-content{
         display: flex;
@@ -1645,7 +1678,7 @@ button:focus{
         margin-left: 5px;
         
     }
-    .fudiku-search-area .fudiku-category .nav-item .nav-link{
+    .fudiku-search-area .fudiku-category .nav-link{
         color: #555;
         padding: 12px;  
         border-radius: 10px;
