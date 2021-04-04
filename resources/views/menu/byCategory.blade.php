@@ -17,7 +17,7 @@
         <div class="fudiku-category">
             <ul class="nav">
                 @foreach($categories as $category)
-                <li class="nav-item <?php echo ($category->name == 'Single Pax') ? 'active' : '' ?>">
+                <li class="nav-item <?php echo ($slug == $category->slug ) ? 'active' : '' ?>">
                     <a href="{{ url("menu/$category->slug/$location") }}" class="nav-link">{{ $category->name}}</a>
                 </li>                                    
                 @endforeach   

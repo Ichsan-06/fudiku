@@ -38,7 +38,7 @@ Route::get('/menu/{location}','MenuController@index')->name('menu');
 
 Route::post('/menu/search','MenuController@search');
 
-Route::get('/menu/{category}/{location}','MenuController@byCategory')->name('menu');
+Route::get('/menu/{slug}/{location}','MenuController@byCategory')->name('menu');
 
 
 

@@ -105,11 +105,12 @@ class MenuController extends Controller
             return view(404);
         }
         else{
-        return view('menu.index',[
+        return view('menu.byCategory',[
                 'categories'=> $categories,
                 'sub_category'=> $subCategory,
                 'location'  => $location,
-                'count'  => $count
+                'count'  => $count,
+                'slug'  => $slug
                 ]);
             }
     }
