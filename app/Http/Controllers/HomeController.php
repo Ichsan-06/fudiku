@@ -23,17 +23,17 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function __construct()
-    {
-       $table = DB::table('payment')->where( 'created_at', '<', Carbon::now())
-                    ->get();
-        DB::table('payment')->where( 'created_at', '<', Carbon::now())
-                    ->delete();
+    // public function __construct()
+    // {
+    //    $table = DB::table('payment')->where( 'created_at', '<', Carbon::now())
+    //                 ->get();
+    //     DB::table('payment')->where( 'created_at', '<', Carbon::now())
+    //                 ->delete();
 
-        foreach ($table as $data) {
-            DB::table('order')->where('code_order',$data->code_order)->delete();
-        }
-    }
+    //     foreach ($table as $data) {
+    //         DB::table('order')->where('code_order',$data->code_order)->delete();
+    //     }
+    // }
     public function index()
     {
         $categories = DB::table('category')->get();

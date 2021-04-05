@@ -1471,7 +1471,7 @@ button:focus{
     .fudiku-search-area .fudiku-category .nav-link{
         border-radius: 10px;
         /* border-color: #5A5A5A; */
-        /* border: 2px solid #F1F2F0; */
+        border: 2px solid #F1F2F0;
         color: #555;
         padding: 10px 15px;
     }
