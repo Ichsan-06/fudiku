@@ -23,6 +23,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+<<<<<<< HEAD
     // public function __construct()
     // {
     //    $table = DB::table('payment')->where( 'created_at', '<', Carbon::now())
@@ -34,6 +35,30 @@ class HomeController extends Controller
     //         DB::table('order')->where('code_order',$data->code_order)->delete();
     //     }
     // }
+=======
+    public function __construct()
+    {
+       $table = DB::table('payment')
+                    ->get();
+    //    echo  $payment  = DB::table('payment')
+    //                 ->where( 'created_at', '<', Carbon::now()->subDay(1))
+    //                 // ->where('status','0')
+    //                 ->count();
+
+        foreach ($table as $data) {
+            // DB::table('order')->where('code_order',$data->code_order)->delete();
+            $tgl = $data->created_at;
+            $date = Carbon::parse("$tgl")->addHour(24);
+            
+            if ($date < Carbon::now()) {
+                DB::table('payment')->where('code_order',$data->code_order)->update(['status' => '4']);
+                // echo "Berhasil";
+            }
+        }
+    // $tgl = $payment->created_at;
+    // echo $date = Carbon::parse("$tgl")->addHour(24);
+    }
+>>>>>>> 0f600e5671080d89315891dc4758eef2b40e2213
     public function index()
     {
         $categories = DB::table('category')->get();

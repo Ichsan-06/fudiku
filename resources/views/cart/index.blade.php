@@ -46,6 +46,10 @@
                             $status = 'Sudah Bayar';
                             $text = null;
                         }
+                        elseif ($payment->status == 4) {
+                            $status = 'Pesanan Telah Kadaluarsa';
+                            $text = null;
+                        }
                         else{
                             $status = 'Dalam Pengiriman';
                             $text = null;
