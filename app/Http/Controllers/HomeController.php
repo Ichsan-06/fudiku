@@ -25,14 +25,25 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-       $table = DB::table('payment')->where( 'created_at', '<', Carbon::now())
+       $table = DB::table('payment')
                     ->get();
-        DB::table('payment')->where( 'created_at', '<', Carbon::now())
-                    ->delete();
+    //    echo  $payment  = DB::table('payment')
+    //                 ->where( 'created_at', '<', Carbon::now()->subDay(1))
+    //                 // ->where('status','0')
+    //                 ->count();
 
         foreach ($table as $data) {
-            DB::table('order')->where('code_order',$data->code_order)->delete();
+            // DB::table('order')->where('code_order',$data->code_order)->delete();
+            $tgl = $data->created_at;
+            $date = Carbon::parse("$tgl")->addHour(24);
+            
+            if ($date < Carbon::now()) {
+                DB::table('payment')->where('code_order',$data->code_order)->update(['status' => '4']);
+                // echo "Berhasil";
+            }
         }
+    // $tgl = $payment->created_at;
+    // echo $date = Carbon::parse("$tgl")->addHour(24);
     }
     public function index()
     {
