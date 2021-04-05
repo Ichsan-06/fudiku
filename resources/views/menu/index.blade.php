@@ -78,7 +78,7 @@
                                     <a href="#" class="updateModal">
 
                                     <div class="menu-img">
-                                        <img src='{{ asset("img/product/$products->image") }}' alt="">
+                                        <img src='{{ asset("img/product/$products->image") }}' alt="" class="image">
                                     </div>
                                     <div class="menu-desc">
                                         <span class="dates">{{$products->date_delivery->isoFormat('dddd, D MMMM Y') }}</span>
@@ -103,7 +103,7 @@
                                     </button>
                                 </div>
                                 <div class="menu-popup-img">
-                                    <img src="{{ asset('img/menu/ampela.jpg') }}" alt="">
+                                    <img src="{{ asset('img/menu/ampela.jpg') }}" alt="" id="img">
                                 </div>
                                 <div class="menu-popup-desc">
                                     <small class="date" id="date"></small>
@@ -155,6 +155,7 @@
 
                 $('#date').text(tr.find(".dates").text());
                 $('#name').text(tr.find(".menu-name").text());
+                $('#img').attr("src",tr.find(".image").attr('src'));
                 // console.log(tr)
                 
             });  
