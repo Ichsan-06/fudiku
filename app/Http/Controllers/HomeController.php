@@ -23,19 +23,6 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-<<<<<<< HEAD
-    // public function __construct()
-    // {
-    //    $table = DB::table('payment')->where( 'created_at', '<', Carbon::now())
-    //                 ->get();
-    //     DB::table('payment')->where( 'created_at', '<', Carbon::now())
-    //                 ->delete();
-
-    //     foreach ($table as $data) {
-    //         DB::table('order')->where('code_order',$data->code_order)->delete();
-    //     }
-    // }
-=======
     public function __construct()
     {
        $table = DB::table('payment')
@@ -58,7 +45,6 @@ class HomeController extends Controller
     // $tgl = $payment->created_at;
     // echo $date = Carbon::parse("$tgl")->addHour(24);
     }
->>>>>>> 0f600e5671080d89315891dc4758eef2b40e2213
     public function index()
     {
         $categories = DB::table('category')->get();
