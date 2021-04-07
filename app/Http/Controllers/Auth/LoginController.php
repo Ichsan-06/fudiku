@@ -50,7 +50,7 @@ class LoginController extends Controller
     protected  function username()
     {
         
-        $login = request()->input('email');
+        $login = request()->input('email');x
 
         $fieldType = filter_var($login,FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
 

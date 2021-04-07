@@ -6,18 +6,18 @@
 
 @section('main-heading')
 
-    <div class="breadcrumb-area">
-        <div class="breadcrumb">
-            <li class="breadcrumb-item">Dashboard</li>
-            <li class="breadcrumb-item active">Product</li>
-        </div>
+<div class="breadcrumb-area">
+    <div class="breadcrumb">
+        <li class="breadcrumb-item">Dashboard</li>
+        <li class="breadcrumb-item active">Product</li>
+    </div>
 
-    </div>
-    <div class="add-area ml-auto">
-        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#exampleModal">
-            Tambah Data
-        </a>
-    </div>
+</div>
+<div class="add-area ml-auto">
+    <a href="#" class="btn add-btn" data-toggle="modal" data-target="#exampleModal">
+        Tambah Data
+    </a>
+</div>
 
 @endsection  
   <div class="table-area">

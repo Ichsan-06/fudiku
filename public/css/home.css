@@ -1559,11 +1559,11 @@ button:focus{
     .mobile-top-nav{
         background-color: #FFF;
         padding: 1rem;
-        position: fixed;
+        position: sticky;
         top: 0;
         right: 0;
         left: 0;
-        z-index: 1030;
+        z-index: 1020;
     }
     .mobile-top-nav .navbar{
         padding: 0;
