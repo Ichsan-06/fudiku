@@ -523,6 +523,9 @@ button:focus{
 .fudiku-order-area .order-menu-item .menu-item{
     height: 235px;
 }
+.fudiku-order-area .order-menu-item .menu-item a{
+    text-decoration: none;
+}
 .fudiku-order-area .order-menu-item .menu-img{
     border-radius: 10px;
     overflow: hidden;
@@ -537,11 +540,38 @@ button:focus{
 }
 .fudiku-order-area .order-menu-item .menu-desc .date{
     font-size: 12px;
+    color: #555;
     font-family: 'ChromaticaLight';
 }
 .fudiku-order-area .order-menu-item .menu-desc .menu-name{
     font-family: 'ChromaticaBold';
     font-size: 14px;
+    color: #000;
+}
+.fudiku-order-area .menu-popup .menu-popup-content{
+    border: none;
+    border-radius: 10px;
+}
+.fudiku-order-area .menu-popup .menu-popup-header{
+    border-bottom: none;
+}
+.fudiku-order-area .menu-popup .menu-popup-img{
+    width: 100% ;
+}
+.fudiku-order-area .menu-popup .menu-popup-img img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    
+}
+.fudiku-order-area .menu-popup .menu-popup-desc{
+    padding: 15px;
+}
+.fudiku-order-area .menu-popup .menu-popup-desc .date{
+    color: #555;
+}
+.fudiku-order-area .menu-popup .menu-popup-desc .info{
+    font-family: 'ChromaticaBold';
 }
 .fudiku-order-area .order-packet .packet-title{
     margin-bottom: 1.25rem;
@@ -611,20 +641,22 @@ button:focus{
     background-color: #FFF;
 }
 .fudiku-schedule-area .schedule-calendar{
-    
+    /* border: 1px solid #000;    */
 }
 .fudiku-schedule-area .schedule-calendar .datepicker{
     position: relative;
-    width: 100%;
+    width: auto;
     font-size: 18px;
     font-family: 'Chromatica';
     border-radius: 10px;
-    overflow: hidden;
     background-color: #FFF;
     border: 2px solid #EFEFEF;
 }
 .fudiku-schedule-area .schedule-calendar .datepicker--content{
     padding: 0;
+}
+.fudiku-schedule-area .schedule-calendar .datepicker--days-names{
+    margin: 0;
 }
 .fudiku-schedule-area .schedule-calendar .datepicker--day-name{
     color: #EB484E;
@@ -673,6 +705,9 @@ button:focus{
 .fudiku-schedule-area .schedule-menu .menu-item{
     height: 235px;
 }
+.fudiku-schedule-area .schedule-menu .menu-item a{
+    text-decoration: none;
+}
 .fudiku-schedule-area .schedule-menu .menu-img{
     position: relative;
     overflow: hidden;
@@ -690,12 +725,38 @@ button:focus{
 .fudiku-schedule-area .schedule-menu .menu-desc .date{
     font-size: 12px;
     font-family: 'ChromaticaLight';
+    color: #555;
 }
 .fudiku-schedule-area .schedule-menu .menu-desc .menu-name{
     font-family: 'ChromaticaBold';
     font-size:  14px;
+    color: #000;
 }
-
+.fudiku-schedule-area .menu-popup .menu-popup-content{
+    border: none;
+    border-radius: 10px;
+}
+.fudiku-schedule-area .menu-popup .menu-popup-header{
+    border-bottom: none;
+}
+.fudiku-schedule-area .menu-popup .menu-popup-img{
+    width: 100% ;
+}
+.fudiku-schedule-area .menu-popup .menu-popup-img img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    
+}
+.fudiku-schedule-area .menu-popup .menu-popup-desc{
+    padding: 15px;
+}
+.fudiku-schedule-area .menu-popup .menu-popup-desc .date{
+    color: #555;
+}
+.fudiku-schedule-area .menu-popup .menu-popup-desc .info{
+    font-family: 'ChromaticaBold';
+}
 .fudiku-schedule-area .schedule-cta{
 }
 .fudiku-schedule-area .schedule-cta .btn{
@@ -1237,7 +1298,7 @@ button:focus{
     font-family: 'ChromaticaLight';
 }
 .fudiku-cart-detail-area .cart-content{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 .fudiku-cart-detail-area .cart-menu{
     position: relative;
@@ -1412,6 +1473,11 @@ button:focus{
     .header-web .navbar{
         background-color: #FFF;
         padding: 1.5rem 0rem;
+        position: sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1020;
     }
     .header-web .navbar-brand img{
         width: 120px;
@@ -1431,8 +1497,10 @@ button:focus{
         margin: auto;
         padding-left: 15px;
         padding-right: 15px;
+        /* border: 1px solid #000; */
     }
     .fudiku-search-area .fudiku-search{
+        /* border: 1px solid #000; */
         width: 60%;
     }
     .fudiku-search-area .fudiku-search .form-field{
@@ -1456,6 +1524,7 @@ button:focus{
     }
     .fudiku-search-area .fudiku-category{
         width: 40%;
+        /* border: 1px solid #000; */
     }
     .fudiku-search-area .fudiku-category .nav{
         justify-content: flex-end;  
@@ -1548,7 +1617,7 @@ button:focus{
     body{
         font-size: 14px;
         background-color: #F5F7FA;
-        margin-top: 80px;
+        /* margin-top: 80px; */
     }
     .header-web{
         display: none;

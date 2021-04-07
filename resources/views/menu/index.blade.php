@@ -81,7 +81,7 @@
                                         <img src='{{ asset("img/product/$products->image") }}' alt="" class="image">
                                     </div>
                                     <div class="menu-desc">
-                                        <span class="dates">{{$products->date_delivery->isoFormat('dddd, D MMMM Y') }}</span>
+                                        <span class="date">{{$products->date_delivery->isoFormat('dddd, D MMMM Y') }}</span>
                                         <p class="menu-name">{{$products->name }}</p>
                                     </div>
                                     
@@ -153,7 +153,7 @@
                 // var date = $(this).attr('data-date');
                 // var name = $(this).attr('menu-name');
 
-                $('#date').text(tr.find(".dates").text());
+                $('#date').text(tr.find(".date").text());
                 $('#name').text(tr.find(".menu-name").text());
                 $('#img').attr("src",tr.find(".image").attr('src'));
                 // console.log(tr)
