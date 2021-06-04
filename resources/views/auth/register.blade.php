@@ -1,5 +1,7 @@
 @extends('template.register')
 
+@section('title','Fudiku - Daftar')
+
 @section('content')
 
 <div class="fudiku-register-user">

@@ -14,9 +14,8 @@ $(document).ready(function(){
     });
 });
 
-$(".home-banner").owlCarousel({
-    loop: true,
-    margin: 10,
+$(".home-content").owlCarousel({
+    loop: false,
     nav: false,
     items: 1,
     dots: true,
@@ -26,16 +25,109 @@ $(".home-banner").owlCarousel({
     autoHeight: false,
     autoplay: false,
     responsive:{
-        576:{
+        0:{
             items:1,
+            margin:10,
+            stagePadding: 15,
+            nav:false
+        },
+        768:{
+            items:2,
+            margin:10,
+            nav:false
+        },
+        992:{
+            items:1,
+            margin:10,
+        },
+    }
+});
+
+$(".feature-content").owlCarousel({
+    loop: false,
+    nav: true,
+    navText:['<i class="icofont-rounded-left"></i>','<i class="icofont-rounded-right"></i>'],
+    items: 3,
+    dots: false,
+    responsiveClass: true,
+    responsive:{
+        0:{
+            items:2,
+            margin:10,
+            stagePadding: 15,
+            nav:false
+        },
+        768:{
+            items:2,
+            margin:10,
+            nav:false
+        },
+        992:{
+            items:4,
+            margin:10
+        }
+    }
+ 
+    
+});
+$(".packet-content").owlCarousel({
+    loop: false,
+    margin: 5,
+    nav: true,
+    navText:['<i class="icofont-rounded-left"></i>','<i class="icofont-rounded-right"></i>'],
+    items: 3,
+    dots: false,
+    responsiveClass: true,
+    responsive:{
+        0:{
+            items:1,
+            stagePadding: 15,
+            nav:false
+        },
+        768:{
+            items:2,
+            nav:false
+        },
+        992:{
+            items:3,
             nav:false
         }
     }
+ 
+    
+});
+$(".supported-content").owlCarousel({
+    loop: true,
+    margin: 5,
+    nav: true,
+    navText:['<i class="icofont-rounded-left"></i>','<i class="icofont-rounded-right"></i>'],
+    items: 3,
+    dots: false,
+    autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
+    responsiveClass: true,
+    responsive:{
+        0:{
+            items:1,
+            stagePadding: 15,
+            nav:false
+        },
+        768:{
+            items:2,
+            nav:false
+        },
+        992:{
+            items:3,
+            nav:false
+        }
+    }
+ 
+    
 });
 
 $(".menu").owlCarousel({
     loop: false,
-    margin: 5,
     nav: true,
     navText:['<i class="icofont-rounded-left"></i>','<i class="icofont-rounded-right"></i>'],
     items: 4,
@@ -45,6 +137,7 @@ $(".menu").owlCarousel({
         0:{
             items:2,
             stagePadding: 15,
+            margin: 10,
             nav:false
         },
         768:{
@@ -52,7 +145,9 @@ $(".menu").owlCarousel({
             nav:false
         },
         992:{
-            items:5
+            margin: 10,
+            items:5,
+            nav:false
         }
     }
  
@@ -61,7 +156,6 @@ $(".menu").owlCarousel({
 
 $(".order-menu-item").owlCarousel({
     loop: false,
-    margin: 5,
     nav: false,
     navText:['<i class="icofont-rounded-left"></i>','<i class="icofont-rounded-right"></i>'],
     items: 5,
@@ -70,17 +164,19 @@ $(".order-menu-item").owlCarousel({
     responsive:{
         0:{
             items:2,
+            margin: 10,
             stagePadding: 15,
             nav: false,
             dots: false
         },
-        600:{
+        768:{
             items:3,
             nav:false
         },
-        1000:{
+        992:{
+            margin: 10,
             items:5,
-            nav:true,
+            nav:false,
             loop:false
         }
     }
@@ -89,26 +185,26 @@ $(".order-menu-item").owlCarousel({
 });
 $(".schedule-menu-item").owlCarousel({
     loop: false,
-    margin: 5,
     nav: false,
     navText:['<i class="icofont-rounded-left"></i>','<i class="icofont-rounded-right"></i>'],
-    items: 5,
     dots: false,
     responsiveClass:true,
     responsive:{
         0:{
             items:2,
+            margin: 10,
             stagePadding: 15,
             nav: false,
             dots: false
         },
-        600:{
+        768:{
             items:3,
             nav:false
         },
-        1000:{
+        992:{
             items:5,
-            nav:true,
+            margin: 10,
+            nav:false,
             loop:false
         }
     }

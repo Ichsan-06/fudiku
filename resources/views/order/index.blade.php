@@ -36,7 +36,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="order-menu">
-                            <div class="menu-title">
+                            <div class="order-menu-title">
                                 <h3 class="title">{{ $subCategory->name }}</h3>
                                 <span class="subtitle">{{ $subCategory->information }}</span>
                             </div>

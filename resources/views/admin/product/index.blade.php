@@ -42,26 +42,26 @@
                 </ul>
             </div>
         @endif
-        <table class="table table-hover">
+        <table class="table table-hover table-striped table-responsive">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Date Delivery</th>
-                    <th scope="col" width='30%'>Thumbnail</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Action</th>
+                    <th with="10%" scope="col">#</th>
+                    <th width="25%" scope="col">Name</th>
+                    <th width="15%" scope="col">Date Delivery</th>
+                    <th width="15%" scope="col" >Thumbnail</th>
+                    <th width="15%" scope="col">Category</th>
+                    <th width="20%" scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($tb_product as $data)
                     <tr>
-                        <th scope="row">{{ $loop->index + 1 }}</th>
-                        <td scope="row">{{ $data->name_product }}</td>                                    
-                        <td scope="row">{{$data->date_delivery->format('d-m-Y') }}</td>                                    
-                        <td width='30%'><img src='{{ url("img/product/$data->image") }}' alt="{{ $data->image }}" width="80" height="80php a"></td>                                    
-                        <td scope="row">{{ $data->name }}</td>                                    
-                        <td scope="row">
+                        <th with="10%" scope="row">{{ $loop->index + 1 }}</th>
+                        <td width="25%" scope="row">{{ $data->name_product }}</td>                                    
+                        <td width="15%" scope="row">{{$data->date_delivery->format('d-m-Y') }}</td>                                    
+                        <td width='15%'><img src='{{ url("img/product/$data->image") }}' alt="{{ $data->image }}" width="80" height="80php a"></td>                                    
+                        <td width="15%" scope="row">{{ $data->name }}</td>                                    
+                        <td width="20%" scope="row">
                         <a href='{{ url("admin/deleteProduct/$data->id") }}' class="btn btn-danger btn-sm">Delete</a>
                         <a href='{{ url("admin/updateProduct/$data->id") }}' class="btn btn-info btn-sm">Update</a>
                         </td>

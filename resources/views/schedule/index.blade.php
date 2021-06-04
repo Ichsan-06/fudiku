@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="schedule-menu">
-                            <div class="schedule-title">
+                            <div class="schedule-menu-title">
                                 <h3 class="title">{{ $subCategory->name }}</h3>
                                 <span class="subtitle">{{ $subCategory->information }}</span>
                             </div>

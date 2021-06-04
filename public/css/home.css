@@ -1,30 +1,26 @@
 @font-face{
-	font-family: 'ChromaticaThin';
-	src: url('../fonts/Chromatica/Chromatica-Thin.ttf');
+	font-family: 'ManropeLight';
+	src: url('../fonts/Manrope/Manrope-Light.ttf');
 }
 @font-face{
-	font-family: 'ChromaticaLight';
-	src: url('../fonts/Chromatica/Chromatica-Light.ttf');
-}
-@font-face{
-	font-family: 'Chromatica';
-	src: url('../fonts/Chromatica/Chromatica-Regular.ttf');
+	font-family: 'Manrope';
+	src: url('../fonts/Manrope/Manrope-Regular.ttf');
 }   
 @font-face{
-	font-family: 'ChromaticaMedium';
-	src: url('../fonts/Chromatica/Chromatica-Medium.ttf');
+	font-family: 'ManropeMedium';
+	src: url('../fonts/Manrope/Manrope-Medium.ttf');
 }
 @font-face{
-	font-family: 'ChromaticaBold';
-	src: url('../fonts/Chromatica/Chromatica-Bold.ttf');
+	font-family: 'ManropeBold';
+	src: url('../fonts/Manrope/Manrope-Bold.ttf');
 }
 
 @font-face{
-	font-family: 'ChromaticaBlack';
-	src: url('../fonts/Chromatica/Chromatica-Black.ttf');
+	font-family: 'ManropeExtraBold';
+	src: url('../fonts/Manrope/Manrope-ExtraBold.ttf');
 }
 body{
-    font-family: 'Chromatica';
+    font-family: 'Manrope';
 }
 button:focus{
     outline: none;
@@ -42,76 +38,74 @@ button:focus{
 }
 .header-web .navbar-nav .nav-link{
     color: #000;
-    font-family: 'Chromatica';
+    font-family: 'Manrope';
     font-size: 1.25rem;
 }
-
 .fudiku-home-area{
     position: relative;
-    padding: 2.5rem 0rem;
-    margin: .5rem 0rem;
+    margin: 0rem 0rem .5rem 0rem;
     overflow: hidden;
+    /* background-color: rgb(248, 248, 248); */
     background-color: #FFF;
     
 }
-/* .fudiku-home-area::after{
+.fudiku-home-area::after{
     display: block;
     z-index: -1;
     top: -5rem;
     right: -53rem;
     border-radius: 25rem;
     transform: rotate(-44deg);
-    background-color: #F5F7FA;
+    background-color: #F00000;
     content: "";
     position: absolute;
     width: 100%;
     height: 100px;
-} */
-.fudiku-home-area .home-banner{
-    
+}
+.fudiku-home-area .home-content{
 }
 .fudiku-home-area .home-item .home-img{
-    
+    animation: fadeIn; 
+    animation-duration: 3s;
 }
 .fudiku-home-area .home-item .home-img img{
-    border-radius: 10px;
+    border-radius: 15px;
     object-fit: contain;
 }
 .fudiku-home-area .home-item .home-img .owl-item.active{
     animation: fadeInLeft; 
     animation-duration: 3s;
 }
-.fudiku-home-area .home-banner .owl-dots .owl-dot{
+.fudiku-home-area .home-content .owl-dots .owl-dot{
     background-color: rgba(0,0,0,0);
 }
-.fudiku-home-area .home-banner .owl-dots .owl-dot span{
-    border: 3px solid #F03A40;
+.fudiku-home-area .home-content .owl-dots .owl-dot span{
+    /* border: 3px solid #F03A40; */
+    background-color: #F0F0F0;
     width: 12px;
     height: 12px;
-    background-color: rgba(0,0,0,0);
 }
-.fudiku-home-area .home-banner .owl-dots .owl-dot span:hover{
+.fudiku-home-area .home-content .owl-dots .owl-dot span:hover{
     background-color: #F03A40;
 }
-.fudiku-home-area .home-banner .owl-dots .owl-dot.active span{
+.fudiku-home-area .home-content .owl-dots .owl-dot.active span{
     width: 24px;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: #F03A40;
 }
-.fudiku-home-area .home-text{
+/* .fudiku-home-area .home-text{
     animation: fadeIn; 
     padding-top: 2.5rem;
     animation-duration: 3s;
 }
 .fudiku-home-area .home-text .title{
-    font-family: 'ChromaticaBlack';
+    font-family: 'ManropeExtraBold';
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    /* background-image: linear-gradient(90deg,#F03A40,#EB484E); */
     background-image: linear-gradient(130deg,#F03A40,#EB484E);
 }
 .fudiku-home-area .home-text .body-text{
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #555;
     font-size: 14px;
 }
@@ -119,77 +113,87 @@ button:focus{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
     border-color: #F03A40;
     color: #FFF;
-    font-family: 'Chromatica';
-    border-radius: 10px;
+    font-family: 'Manrope';
+    border-radius: 15px;
     padding: 12px;
     width: 100%;
-}
+} */
 .fudiku-feature-area{
     position: relative;
-    padding: 2.5rem 0rem 2rem 0rem;
-    margin: 0.5rem 0rem;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    /* background-color: rgb(248, 248, 248); */
     background-color: #FFF;
 }
 .fudiku-feature-area .feature-title{
     text-align: center;
 }
 .fudiku-feature-area .feature-title .title{
-    font-family: 'ChromaticaBlack';
+    font-family: 'ManropeExtraBold';
 }
 .fudiku-feature-area .feature-content{
     margin-top: 1.5rem;
 }
 .fudiku-feature-area .feature{
+    animation: fadeInUp ;
+    animation-duration: 3s;
     text-align: center;
-    animation: fadeIn;
     background-color: #FFF;
-    border-radius: 10px;
-    animation-duration: 2s;
+    padding: 20px 15px;
+    border: 2px solid #EFEFEF;
+    /* box-shadow: 0 2px 4px rgb(15 34 58 / 12%); */
+    border-radius: 15px;
 }
 .fudiku-feature-area .feature-icon{
     position: relative;
-    
 }
 .fudiku-feature-area .feature-icon i:before{
     color: #EB484E;
     font-size: 50px;
 
 }
-.fudiku-feature-area .feature-info .subtitle{
-    font-family: 'ChromaticaBold';
+.fudiku-feature-area .feature-info .title{
+    font-family: 'ManropeBold';
     color: #000;
 }
-.fudiku-feature-area .feature-content .body-text{
+.fudiku-feature-area .feature-content .subtitle{
     color: #555;
     font-size: 12px;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
 }
 .fudiku-packet-area{
     position: relative;
-    padding: 2.5rem 0rem 0rem 0rem;
-    margin: 0.5rem 0rem;
+    /* margin: 0.5rem 0rem; */
     background-color: #FFF;
+    /* background-color: rgb(248, 248, 248); */
 }
 .fudiku-packet-area .packet-title{
     text-align: center;
 }
 .fudiku-packet-area .packet-title .title{
-    font-family: 'ChromaticaBlack';
+    font-family: 'ManropeExtraBold';
 }
 .fudiku-packet-area .packet-content{
     margin-top: 1.25rem;
 }
 .fudiku-packet-area .packet{
-    margin-bottom: 2.5rem;
-    text-align: center;
+    overflow: hidden;
+    /* box-shadow: 0 2px 4px rgb(15 34 58 / 12%); */
+    border: 2px solid #EFEFEF;
+    animation: fadeIn;
+    animation-duration: 3s;
+    border-radius: 15px;
+}
+.fudiku-packet-area .packet a{
+    text-decoration: none;
 }
 .fudiku-packet-area .packet-img{
     position: relative;
     width: 100%;
     height: 150px;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 1.25rem;
+    /* overflow: hidden; */
+    /* border-radius: 15px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     /* border: 1px solid #000; */
 }
 .fudiku-packet-area .packet-img img{
@@ -204,26 +208,25 @@ button:focus{
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.3);
 } */
 .fudiku-packet-area .packet-category{
-    margin-bottom: 1.25rem;
     text-align: center;
-    /* border: 1px solid #000; */
+    padding: 1rem 0.5rem;
+    background-color: #FFF;
 }
 .fudiku-packet-area .packet-category .desc{
     font-size: 12px;
 }
 .fudiku-packet-area .packet-category .name{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     color: #000;
     margin-bottom: 0;
 }
 .fudiku-packet-area .packet-category .desc{
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #555;
     font-size: 12px;
-    margin-bottom: 0;
 }
 .fudiku-packet-area .packet-cta .btn{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
@@ -231,51 +234,52 @@ button:focus{
     color: #FFF;
     padding: 12px;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-cta-area{
     position: relative;
-    padding: 2.5rem 0rem;
-    margin: 0.5rem 0rem;
+    margin: 0.5rem 0rem 0.5rem 0rem;
     background-color: #FFF;
+    /* background-color: rgb(248, 248, 248); */
 }
 .fudiku-cta-area .cta-content{
     background-color: #EBBD48;
     padding: 1.5rem;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 15px;
+    animation: fadeIn;
+    animation-duration: 3s;
 }
 .fudiku-cta-area .cta-content .cta-title{
     margin-bottom: 1.5rem;
 }
 .fudiku-cta-area .cta-content .cta-title .title{
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
 }
 .fudiku-cta-area .cta-content .cta-title .title,
 .fudiku-cta-area .cta-content .cta-title .subtitle{
     color: #FFF;
 }
 .fudiku-cta-area .cta-content .cta-title .subtitle{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-cta-area .cta-content .btn{
     padding: 12px;
     color: #FFF;
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
     border-color: #F03A40;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 200px;
 }
 .fudiku-supported-area{
     position: relative;
-    padding: 2.5rem 0rem 6.5rem 0rem;
     margin: 0.5rem 0rem 0rem 0rem;
     background-color: #FFF;
 
 }
 .fudiku-supported-area .supported-title .title{
     text-align: center;
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeExtraBold';
 }
 .fudiku-supported-area .supported-content{
     display: flex;
@@ -285,7 +289,7 @@ button:focus{
 .fudiku-supported-area .supported-content .supported{
     margin: .5rem;
     /* padding: .5rem;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: #FFF; */
 }
 .fudiku-supported-area .supported-content .supported-img{
@@ -298,15 +302,13 @@ button:focus{
 .fudiku-location-area{
     position: relative;
     background-color: #FFF;
-    padding: 1.5rem 0rem;
-    margin: .5rem 0rem 0rem 0rem;
 }
 .fudiku-location-area .location-form{
     width: 50%;
     /* border: 1px solid #000; */
 }
 .fudiku-location-area .location-form .location-title{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     margin-bottom: 1rem;
 } 
 .fudiku-location-area .location-form .location-title .title{
@@ -317,7 +319,7 @@ button:focus{
 }
 .fudiku-location-area .location-form .form-field input{
     height: 50px;
-    border-radius: 10px;
+    border-radius: 15px;
     border: 2px solid #EFEFEF;
     box-shadow: none;
 }   
@@ -329,7 +331,7 @@ button:focus{
     top: 5px;
     width: 40px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 15px;
     right: 5px;
     color: #FFF;
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
@@ -347,7 +349,7 @@ button:focus{
 }
 .fudiku-location-area .location-form .location-search{
     border: 2px solid #EFEFEF;
-    border-radius: 10px;
+    border-radius: 15px;
     background: #FFF;
     padding: 0;
     overflow: hidden;
@@ -360,14 +362,68 @@ button:focus{
 .fudiku-location-area .location-form .location-search-list:focus{
     background-color: #EB484E;
 }
-
+.fudiku-location-area .location-img-area{
+        width: 50%;
+        /* border: 1px solid #000; */
+}
+.fudiku-location-area .location-img{
+    height: 500px;
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+.fudiku-location-area .location-img img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.fudiku-delivery-area .delivery-title .title{
+    font-family: 'ManropeBold';
+}
 .fudiku-menu-area{
     position: relative;
     padding: 1.5rem 0rem;
-    background-color: #FFFF;
+    background-color: #FFF;
+}
+.fudiku-menu-area .menu-wrapper{
+    
+}
+.fudiku-menu-area .wrapper-title{
+    /* display: flex; */
+    margin-bottom: 1.25rem;
+}
+.fudiku-menu-area .wrapper-title h4{
+    /* border: 1px solid #000; */
+    font-family: 'ManropeBold';
+}
+.fudiku-menu-area .wrapper-title .see {
+    /* border: 1px solid #000; */
+    font-family: 'ManropeLight';
+    font-size: 14px;
+    background-color: #EB484E;
+    padding: 10px 10px;
+    border-radius: 15px;
+}
+.fudiku-menu-area .wrapper-title span a{
+    color: #FFF;
+    text-decoration: none;
 }
 .fudiku-menu-area .menu-content{
     position: relative; 
+    overflow: hidden;
+    padding: 15px;
+    margin-bottom: 1.25rem;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+}
+.fudiku-menu-area .menu-content::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(200deg, #EBBD48 100%, #F2C041 0%);
 }
 .fudiku-menu-area .menu-title{
     z-index: 1;
@@ -375,51 +431,54 @@ button:focus{
     margin-bottom: 1.25rem;
 }
 .fudiku-menu-area .menu-title .title{
-    font-family: 'ChromaticaBlack';
+    font-family: 'ManropeExtraBold';
     margin-bottom: 0rem;
-    color: #EB484E;
+    color: #FFF;
 }
 .fudiku-menu-area .menu-title .subtitle{
-    font-family: 'ChromaticaThin';
+    font-family: 'ManropeLight';
     margin-bottom: 0rem;
-    color: #000;
+    color: #f0f0f0;
 }
 .fudiku-menu-area .menu{
     position: static;
-    height: 220px;
+    height: 250px;
+    overflow: hidden;
     margin-bottom: 1.25rem;
 }
 .fudiku-menu-area .menu-item{
-    height: 220px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 250px;
 }
 .fudiku-menu-area .menu-item a{
     text-decoration: none;
 }
 .fudiku-menu-area .menu .menu-img{
-    overflow: hidden;
-    border-radius: 10px;
     height: 150px;
 }
 .fudiku-menu-area .menu .menu-img img{
     object-fit: cover;
-    height: 150px;
+    height: 100%;
     width: 100%;
 }
 .fudiku-menu-area .menu .menu-desc{
-    height: 75px;
+    height: 100px;
+    padding: 10px;
+    background-color: #FFF;
 }
 .fudiku-menu-area .menu .menu-desc .date{
     font-size: 12px;
     color: #555;
 }
 .fudiku-menu-area .menu .menu-desc .menu-name{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     font-size: 14px;
     color: #000;
 }
 .fudiku-menu-area .menu-popup .menu-popup-content{
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-menu-area .menu-popup .menu-popup-header{
     border-bottom: none;
@@ -440,18 +499,18 @@ button:focus{
     color: #555;
 }
 .fudiku-menu-area .menu-popup .menu-popup-desc .info{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-menu-area .menu-cta{
 
 }
 .fudiku-menu-area .menu-cta .btn{
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     padding: 12px;
     color: #FFF;
-    background-image: linear-gradient(180deg,#F03A40,#EB484E);
-    border-color: #F03A40;
-    border-radius: 10px;
+    background-image: linear-gradient(180deg,#DE474C,#EB484E);
+    border-color: #DE474C;
+    border-radius: 15px;
     width: 200px;
 
 }
@@ -480,7 +539,7 @@ button:focus{
     text-align: center;
 }
 .fudiku-not-available-area .not-available-title .title{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-order-area{
     position: relative;
@@ -502,32 +561,50 @@ button:focus{
     position: relative;
     z-index: 1;
 } */
-.fudiku-order-area .menu-title{
+.fudiku-order-area .order-menu-title{
     margin-bottom: 1.25rem;
+    z-index: 1;
+    position: relative;
 }
-.fudiku-order-area .menu-title .title{
-    font-family: 'ChromaticaBold';
-    color: #EB484E;
+.fudiku-order-area .order-menu-title .title{
+    font-family: 'ManropeBold';
+    color: #FFF;
     margin-bottom: 0;
 }
-.fudiku-order-area .menu-title .subtitle{
-    color: #000;
+.fudiku-order-area .order-menu-title .subtitle{
+    color: #f0f0f0;
     margin-bottom: 0;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
+}
+.fudiku-order-area .order-menu{
+    position: relative;
+    overflow: hidden;
+    background-color: #F0F0F0;
+    border-radius: 15px;
+    padding: 15px;
+}
+.fudiku-order-area .order-menu::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #EBBD48;
 }
 .fudiku-order-area .order-menu-item{
     position: static;
-    height: 235px;
     /* border: 1px solid #000; */
 }
 .fudiku-order-area .order-menu-item .menu-item{
-    height: 235px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 .fudiku-order-area .order-menu-item .menu-item a{
     text-decoration: none;
 }
 .fudiku-order-area .order-menu-item .menu-img{
-    border-radius: 10px;
     overflow: hidden;
 }
 .fudiku-order-area .order-menu-item .menu-img img{
@@ -536,21 +613,22 @@ button:focus{
     height: 150px;
 }
 .fudiku-order-area .order-menu-item .menu-desc{
-    height: 75px;   
+    background-color: #FFF;
+    padding: 10px;   
 }
 .fudiku-order-area .order-menu-item .menu-desc .date{
     font-size: 12px;
     color: #555;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
 }
 .fudiku-order-area .order-menu-item .menu-desc .menu-name{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     font-size: 14px;
     color: #000;
 }
 .fudiku-order-area .menu-popup .menu-popup-content{
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-order-area .menu-popup .menu-popup-header{
     border-bottom: none;
@@ -571,13 +649,13 @@ button:focus{
     color: #555;
 }
 .fudiku-order-area .menu-popup .menu-popup-desc .info{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-order-area .order-packet .packet-title{
     margin-bottom: 1.25rem;
 }
 .fudiku-order-area .order-packet .packet-title .title{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     margin-bottom: 0;
 }
 .fudiku-order-area .order-packet .packet{
@@ -604,15 +682,16 @@ button:focus{
     background-color: #F5F7FA;
     display: flex;
     cursor: pointer;
-    padding: 1rem;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    line-height: 2;
 }
 .fudiku-order-area .order-packet .packet .label .packet-price .tax{
     color: #F03A40;
 }
 .fudiku-order-area .order-packet .packet-info .name{
-    font-family: 'ChromaticaBold';   
-    font-size: 1rem;
+    font-family: 'ManropeBold';   
+    font-size: 15px;
 }
 .fudiku-order-area .order-packet .packet-info .day{
     color: #555;
@@ -621,17 +700,17 @@ button:focus{
     margin-left: auto;
 }
 .fudiku-order-area .order-packet .packet-price .price{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     font-size: 1.15rem;
 }
 .fudiku-order-area .order-cta .btn{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
     border-color: #F03A40;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #FFF;
     width: 100%;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: 15px;
     
 }
 .fudiku-schedule-area{
@@ -647,8 +726,8 @@ button:focus{
     position: relative;
     width: auto;
     font-size: 18px;
-    font-family: 'Chromatica';
-    border-radius: 10px;
+    font-family: 'Manrope';
+    border-radius: 15px;
     background-color: #FFF;
     border: 2px solid #EFEFEF;
 }
@@ -681,29 +760,51 @@ button:focus{
 .fudiku-schedule-area .schedule-calendar .datepicker--cell.-selected-{
     background-color: #F03A40;
 }
-.fudiku-schedule-area .schedule-title{
-    margin-bottom: 1.25rem;
-}
-.fudiku-schedule-area .schedule-title .title{
-    font-family: 'ChromaticaBold';
-    color: #EB484E;
-    margin-bottom: 0;
-}   
-.fudiku-schedule-area .schedule-title .subtitle{
-    color: #000;
-    margin-bottom: 0;
-    font-family: 'ChromaticaLight';
-}
+
 .fudiku-schedule-area .schedule-menu-item{
     position: static;
-    height: 235px;
+    height: 250px;
     margin-bottom: 1.25rem;
 }
 .fudiku-schedule-area .schedule-menu{
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+    background-color: #F0F0F0;
+    border-radius: 15px;
     /* border: 1px solid #000; */
 }
+.fudiku-schedule-area .schedule-menu::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 242px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #EBBD48;
+}
+.fudiku-schedule-area .schedule-menu-title{
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.25rem;
+}
+.fudiku-schedule-area .schedule-menu-title .title{
+    font-family: 'ManropeBold';
+    color: #FFF;
+    margin-bottom: 0;
+}   
+.fudiku-schedule-area .schedule-menu-title .subtitle{
+    color: #F0F0F0;
+    margin-bottom: 0;
+    font-family: 'ManropeLight';
+}
 .fudiku-schedule-area .schedule-menu .menu-item{
-    height: 235px;
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    border-radius: 15px;
 }
 .fudiku-schedule-area .schedule-menu .menu-item a{
     text-decoration: none;
@@ -712,7 +813,6 @@ button:focus{
     position: relative;
     overflow: hidden;
     height: 150px;
-    border-radius: 10px;
 }
 .fudiku-schedule-area .schedule-menu .menu-img img{
     object-fit: cover;
@@ -720,21 +820,22 @@ button:focus{
     width: 100%;
 }   
 .fudiku-schedule-area .schedule-menu .menu-desc{
-    height: 75px;
+    padding: 10px;
+    background-color: #FFF;
 }
 .fudiku-schedule-area .schedule-menu .menu-desc .date{
     font-size: 12px;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #555;
 }
 .fudiku-schedule-area .schedule-menu .menu-desc .menu-name{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     font-size:  14px;
     color: #000;
 }
 .fudiku-schedule-area .menu-popup .menu-popup-content{
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-schedule-area .menu-popup .menu-popup-header{
     border-bottom: none;
@@ -755,18 +856,18 @@ button:focus{
     color: #555;
 }
 .fudiku-schedule-area .menu-popup .menu-popup-desc .info{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-schedule-area .schedule-cta{
 }
 .fudiku-schedule-area .schedule-cta .btn{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
     border-color: #F03A40;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #FFF;
     width: 100%;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-form-area{
     position: relative;
@@ -778,11 +879,11 @@ button:focus{
     margin-bottom: 1.25rem;
 }
 .fudiku-form-area .form-title .title{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     margin-bottom: 0;
 }
 .fudiku-form-area .form-title .subtitle{
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #555;
     margin-bottom: 0;
 }
@@ -803,8 +904,8 @@ button:focus{
     height: 50px;
 }
 .fudiku-form-area .form-group .form-control{
-    border-radius: 10px;
-    font-family: 'ChromaticaLight';
+    border-radius: 15px;
+    font-family: 'ManropeLight';
     font-size: 14px;
     border: 2px solid #EFEFEF;
     width: 100%;
@@ -820,11 +921,11 @@ button:focus{
 .fudiku-form-area .form-area .btn{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
     border-color: #F03A40;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #FFF;
     width: 100%;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-payment-area{
     position: relative;
@@ -833,7 +934,7 @@ button:focus{
     background-color: #FFF;
 }
 .fudiku-payment-area .payment-title .title{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-payment-area .payment-content{
     margin-top: 1.25rem;
@@ -855,7 +956,7 @@ button:focus{
     display: flex;
     cursor: pointer;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-payment-area .payment-method .payment-radio{
     position: absolute;
@@ -877,11 +978,11 @@ button:focus{
 .fudiku-payment-area .payment-cta .btn{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
     border-color: #F03A40;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #FFF;
     padding: 12px;
     width: 200px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-payment-detail-area{
     position: relative;
@@ -891,7 +992,7 @@ button:focus{
 }
 .fudiku-payment-detail-area .detail-information{
     background-color: #F5F7FA;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 1.5rem;
 }
 .fudiku-payment-detail-area .detail-information .detail-info{
@@ -901,7 +1002,7 @@ button:focus{
     border: 2px solid #EFEFEF;
     padding: 1.5rem;
     
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-payment-detail-area .detail-form .form-group{
     margin-bottom: 1.25rem;
@@ -911,7 +1012,7 @@ button:focus{
     border: none;
     background-color: #F5F7FA;
     border: 1px solid #EFEFEF;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-payment-detail-area .detail-information .btn{
     width: 100%;
@@ -919,7 +1020,7 @@ button:focus{
     color: #EB484E;
     padding: 12px;
     margin-top: 1.25rem;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-payment-detail-area .detail-cta{
     margin-top: 1.25rem;
@@ -927,11 +1028,11 @@ button:focus{
 .fudiku-payment-detail-area .detail-cta .btn{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
     border-color: #F03A40;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #FFF;
     width: 100%;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-cod-area{
     position: relative;
@@ -956,10 +1057,9 @@ button:focus{
 .fudiku-cod-area .cod-title{
     text-align: center;
     margin-bottom: 1.25rem;
-
 }
 .fudiku-cod-area .cod-title .title{
-    font-family: 'ChromaticaBlack';
+    font-family: 'ManropeExtraBold';
 }
 .fudiku-cod-area .cod-cta{
 
@@ -967,16 +1067,16 @@ button:focus{
 .fudiku-cod-area .cod-cta .btn{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
     border-color: #F03A40;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #FFF;
     width: 100%;
     padding: 12px;
-    border-radius: 10px;   
+    border-radius: 15px;   
 }
 .fudiku-profile-area{
     position: relative;
     padding: 1.5rem 0rem;
-    margin: .5rem 0rem 0rem 0rem;
+    /* margin: .5rem 0rem 0rem 0rem; */
     background-color: #FFFF;
 }
 .fudiku-profile-area .profile-content{
@@ -1017,7 +1117,7 @@ button:focus{
     /* border: 1px solid #000; */
 }
 .fudiku-profile-area .profile-info .name{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     margin-bottom: 0;
 }
 .fudiku-profile-area .profile-edit{
@@ -1028,25 +1128,25 @@ button:focus{
     width: 150px;
     border: 2px solid #EB484E;
     color: #F03A40;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-profile-area .profile-detail-info .detail-info{
     margin-bottom: 1.5rem;
     /* border: 1px solid #000; */
 }
 .fudiku-profile-area .profile-detail-info .detail-info .info-heading{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-profile-area .profile-cta{
     margin-top: 1.25rem;   
 }
 .fudiku-profile-area .profile-cta .btn{
     border: 2px solid #F03A40;
-    font-family: 'Chromatica';
+    font-family: 'Manrope';
     color: #F03A40;
     width: 100%;
     padding: 12px;
-    border-radius: 10px; 
+    border-radius: 15px; 
 }
 .fudiku-profile-area .profile-cta .btn:focus{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
@@ -1056,7 +1156,7 @@ button:focus{
 .fudiku-profile-blank-area{
     position: relative;
     padding: 1.5rem 0rem;
-    margin: .5rem 0rem 0rem 0rem;
+    /* margin: .5rem 0rem 0rem 0rem; */
     background-color: #FFF;
 }
 .fudiku-profile-blank-area .profile-blank-content{
@@ -1081,7 +1181,7 @@ button:focus{
     /* border: 1px solid #000; */
 }
 .fudiku-profile-blank-area .profile-blank-title .title{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     margin: 0;
 }
 .fudiku-profile-blank-area .profile-blank-cta{
@@ -1089,11 +1189,11 @@ button:focus{
 }
 .fudiku-profile-blank-area .profile-blank-cta .btn{
     border: 2px solid #EB484E;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #EB484E;
     width: 100%;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-profile-blank-area .profile-blank-cta .btn:focus{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
@@ -1177,7 +1277,7 @@ button:focus{
 }
 .fudiku-profile-edit-area .profile-edit-form .form-control{
     border: 2px solid #EFEFEF;
-    border-radius: 10px;
+    border-radius: 15px;
     height: 50px;
     font-size: 14px;
     padding-left: 15px;
@@ -1188,7 +1288,7 @@ button:focus{
     color: #FFF;
     width: 100%;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-finish-area{
     position: relative;
@@ -1213,18 +1313,18 @@ button:focus{
     text-align: center;
 }
 .fudiku-finish-area .finish-title .title{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-cart-area{
     position: relative;
     padding: 1.5rem 0rem;
-    margin: .5rem 0rem 0rem 0rem;
+    /* margin: .5rem 0rem 0rem 0rem; */
     background-color: #FFF;
 }
 .fudiku-cart-area .cart-content{
     margin-bottom: 1.25rem;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     border: 2px solid #EFEFEF;
 }
@@ -1237,18 +1337,18 @@ button:focus{
     margin-bottom: 0.5rem;
 }
 .fudiku-cart-area .cart-content .cart-desc .subcategory{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-cart-area .cart-content .cart-desc .address{
     font-size: 12px;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
 }
 .fudiku-cart-area .cart-content .cart-desc .date{
     font-size: 14px;
 }
 .fudiku-cart-area .cart-content .cart-desc .price{
     color: #F03A40;
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-cart-area .cart-content .cart-menu{
     /* width: 40%; */
@@ -1256,7 +1356,7 @@ button:focus{
 }
 .fudiku-cart-area .cart-content .cart-menu .cart-img{
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 15px;
     height: 150px;
     /* border: 1px solid #000; */
 }
@@ -1269,14 +1369,14 @@ button:focus{
     font-size: 12px;
 }
 .fudiku-cart-area .cart-content .cart-menu .cart-desc .name{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     font-size: 14px;
     margin: 0;
 }
 .fudiku-cart-detail-area{
     position: relative;
     padding: 1.5rem 0rem;
-    margin: .5rem 0rem;
+    margin: .5rem 0rem 0rem 0rem;
     background-color: #FFF;
 }
 .fudiku-cart-detail-area .cart-detail-content{
@@ -1291,11 +1391,11 @@ button:focus{
     margin-bottom: 0.5;
 }
 .fudiku-cart-detail-area .cart-detail-title .title{
-    font-family: 'ChromaticaBold';  
+    font-family: 'ManropeBold';  
 }
 .fudiku-cart-detail-area .cart-detail-title .address{
     font-size: 14px;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
 }
 .fudiku-cart-detail-area .cart-content{
     /* border: 1px solid #000; */
@@ -1304,7 +1404,7 @@ button:focus{
     position: relative;
     background-color: #FFF;
     /* border: 2px solid #F1F2F3; */
-    border-radius: 10px;
+    border-radius: 15px;
     margin-bottom: 1.25rem; 
 }
 .fudiku-cart-detail-area .cart-menu-item{
@@ -1314,7 +1414,7 @@ button:focus{
 .fudiku-cart-detail-area .cart-item .cart-img{
     height: 125px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-cart-detail-area .cart-item .cart-img img{
     height: 100%;
@@ -1323,37 +1423,37 @@ button:focus{
 }
 .fudiku-cart-detail-area .cart-item .cart-desc{
     margin: 0.5rem 0rem;
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-cart-detail-area .cart-item .cart-desc .date{
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     font-size: 12px;
     margin-bottom: 0;
 }
 .fudiku-cart-detail-area .cart-menu .cart-title .title{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-cart-detail-area .cart-menu .cart-title .address{
     font-size: 12px;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
 }
 .fudiku-cart-detail-area .cart-information{
     background-color: #F0F0F0;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-cart-detail-area .cart-information .title{
     color: #555;
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-cart-detail-area .cart-information .price{
     color: #EB484E;
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
 }
 .fudiku-cart-empty-area{
     position: relative;
     padding: 1.5rem 0rem;
-    margin: .5rem 0rem 0rem 0rem;
+    /* margin: .5rem 0rem 0rem 0rem; */
     background-color: #FFF;
 }
 .fudiku-cart-empty-area .cart-empty-content{
@@ -1378,7 +1478,7 @@ button:focus{
     /* border: 1px solid #000; */
 }
 .fudiku-cart-empty-area .cart-empty-title .title{
-    font-family: 'ChromaticaBold';
+    font-family: 'ManropeBold';
     margin: 0;
 }
 .fudiku-cart-empty-area .cart-empty-cta{
@@ -1386,11 +1486,11 @@ button:focus{
 }
 .fudiku-cart-empty-area .cart-empty-cta .btn{
     border: 2px solid #EB484E;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     color: #EB484E;
     width: 100%;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .fudiku-cart-empty-area .cart-empty-cta .btn:focus{
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
@@ -1401,16 +1501,16 @@ button:focus{
     bottom: 0;
     width: 100%;
     padding: 3rem 0rem;
-    background-color: #2A2A2A;
+    background-color: rgb(248, 248, 248);
 }
 .footer-web .title{
-    font-family: 'ChromaticaBold';
-    color: #FFF;
+    font-family: 'ManropeBold';
+    color: #2a2a2a;
 }
 .footer-web .body-text{
-    color: #CCC;
+    color: #555;
     font-size: 12px;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
 }
 .footer-web .footer-location .location-info{
     /* border: 1px solid #000; */
@@ -1418,7 +1518,7 @@ button:focus{
 .footer-web .footer-location .location-info .address{
     color: #C5C5C5;
     font-size: 1rem;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
 }
 .footer-web .footer-about .about-info{
     margin-bottom: 10px;
@@ -1451,7 +1551,7 @@ button:focus{
     width: 75px;
     margin-right: 5px;
     padding: .5rem  ;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .footer-web .footer-payment .payment-img{
 
@@ -1466,8 +1566,8 @@ button:focus{
     } 
     body{
         font-size: 16px;
-        background-color: #F5F7FA;
         /* margin-top: 93px; */
+        background-color: #F5F5F7;
         margin-bottom: 255px;
     }
     .header-web .navbar{
@@ -1482,8 +1582,49 @@ button:focus{
     .header-web .navbar-brand img{
         width: 120px;
     }
+    .header-web .navbar-nav .register{
+        background-image: linear-gradient(180deg,#F03A40,#EB484E);
+        color: #FFF;
+        padding: 5px 20px;
+        border-radius: 15px;
+    }
     .mobile-top-nav{
         display: none;
+    }
+    .mobile-bottom-nav{
+        display: none;
+    }
+    .fudiku-home-area{
+        position: relative;
+        padding: 3.5rem 0rem;
+        margin: 0rem 0rem .5rem 0rem;
+        overflow: hidden;
+        background-color: #FFF;
+        
+    }
+    .fudiku-feature-area{
+        position: relative;
+        padding: 3.5rem 0rem;
+        margin: 0.5rem 0rem 0.5rem 0rem;
+        background-color: #FFF;
+    }
+    .fudiku-packet-area{
+        position: relative;
+        padding: 3.5rem 0rem;
+        margin: 0.5rem 0rem 0.5rem 0rem;
+        background-color: #FFF;
+    }
+    .fudiku-cta-area{
+        position: relative;
+        padding: 3.5rem 0rem;
+        margin: 0.5rem 0rem 0.5rem 0rem;
+        background-color: #FFF;
+    }
+    .fudiku-supported-area{
+        position: relative;
+        padding: 3.5rem 0rem;
+        margin: 0.5rem 0rem 0.5rem 0rem;
+        background-color: #FFF;
     }
     .fudiku-search-area{
         position: relative;
@@ -1508,7 +1649,7 @@ button:focus{
     }
     .fudiku-search-area .fudiku-search .form-field input{
         padding: 22px 15px;
-        border-radius: 10px;
+        border-radius: 15px;
         border: 2px solid #F1F2F0;
         /* box-shadow: 0 2px 4px rgb(15 34 58 / 12%); */
     }
@@ -1517,7 +1658,7 @@ button:focus{
         top: 5px;
         right: 5px;
         padding: 6px 12px;
-        border-radius: 10px;
+        border-radius: 15px;
         /* border: 1px solid #000; */
         background-image: linear-gradient(180deg,#F03A40,#EB484E);
         color: #FFF;
@@ -1538,7 +1679,7 @@ button:focus{
         color: #FFF;
     }
     .fudiku-search-area .fudiku-category .nav-link{
-        border-radius: 10px;
+        border-radius: 15px;
         /* border-color: #5A5A5A; */
         border: 2px solid #F1F2F0;
         color: #555;
@@ -1576,7 +1717,7 @@ button:focus{
     .fudiku-location-area .location-form .form{
         position: relative;
         padding: 3.5rem 3rem;
-        border-radius: 10px;
+        border-radius: 15px;
         background-color: #FFF;
         border: 2px solid #EFEFEF;
         /* box-shadow: 0 2px 4px rgb(15 34 58 / 12%); */
@@ -1595,8 +1736,36 @@ button:focus{
         width: 100%;
         height: 100%;
     }
-    .mobile-bottom-nav{
-        display: none;
+    .fudiku-menu-area .menu-content::before{
+        height: 243px;
+    }
+    .fudiku-order-area .order-menu::before{
+        height: 267px;
+        
+    }
+    .fudiku-order-area .order-menu-item{
+        position: static;
+        height: 250px;
+        /* border: 1px solid #000; */
+    }
+    .fudiku-order-area .order-menu-item .menu-item{
+        height: 250px;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .fudiku-order-area .order-menu-item .menu-desc{
+        height: 100px;
+        background-color: #FFF;
+    }
+    .fudiku-schedule-area .schedule-menu .menu-item{
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+        border-radius: 15px;
+    }
+    .fudiku-schedule-area .schedule-menu .menu-desc{
+        height: 100px;
+        background-color: #FFF;
     }
 }
 @media (max-width: 992px){
@@ -1672,8 +1841,8 @@ button:focus{
         margin: 15px;
         border-radius: 50px;
         transition: .5s;
-        box-shadow: 0px 1px 5px rgb(15 34 58 / 12%);
-        /* border: 1px solid #EFEFEF; */
+        /* box-shadow: 0px 1px 5px rgb(15 34 58 / 12%); */
+        border: 2px solid #EFEFEF;
     }
     .mobile-bottom-nav .navbar-nav{
         display: flex;
@@ -1703,6 +1872,38 @@ button:focus{
         color: #FFF;
         line-height: 40px;
     }
+    .fudiku-home-area,
+    .fudiku-feature-area,
+    .fudiku-packet-area,
+    .fudiku-cta-area
+    {
+        position: relative;
+        padding: 1.5rem 0rem;
+        
+    }
+    .fudiku-supported-area{
+        padding: 1.5rem 0rem 6rem 0rem;
+    }
+    .fudiku-home-area .owl-theme .owl-nav.disabled + .owl-dots{
+        margin-top: 1.25rem;
+    }
+    .fudiku-home-area .home-img{
+        /* border: 1px solid #000; */
+    }
+    .fudiku-home-area .home-img img{
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+    /* .fudiku-home-area .home-text{
+        text-align: center;
+        margin-top: 1.25rem;
+    } */
+    .fudiku-delivery-area{
+        background-color: #FFF;
+        padding: 1.5rem 0rem;
+        margin-bottom: .5rem;
+    }
     .fudiku-search-area{
         position: relative; 
         background-color: #FFF;
@@ -1718,7 +1919,7 @@ button:focus{
     .fudiku-search-area .fudiku-search .form-field input{
         border: 2px solid #EFEFEF;
         padding: 22px 15px;
-        border-radius: 10px;
+        border-radius: 15px;
         /* border: 1px solid #000; */
     }
     .fudiku-search-area .fudiku-search .form-field .btn{
@@ -1726,7 +1927,7 @@ button:focus{
         top: 5px;
         right: 5px;
         padding: 6px 12px;
-        border-radius: 10px;
+        border-radius: 15px;
         /* border: 1px solid #000; */
         background-image: linear-gradient(180deg,#F03A40,#EB484E);
         color: #FFF;
@@ -1741,6 +1942,7 @@ button:focus{
     .fudiku-search-area .fudiku-category .nav-item.active .nav-link{
         background-color: #EB484E;
         color: #FFF;
+        border: 2px solid #EB484E;
     }
     .fudiku-search-area .fudiku-category .nav-item{
         margin-right: 5px;
@@ -1750,29 +1952,11 @@ button:focus{
     .fudiku-search-area .fudiku-category .nav-link{
         color: #555;
         padding: 12px;  
-        border-radius: 10px;
+        border-radius: 15px;
         border: 2px solid #EFEFEF;
     }   
-    .fudiku-delivery-area{
-        background-color: #FFF;
-        padding: 1.5rem 0rem;
-        margin-bottom: .5rem;
-    }
-    .fudiku-home-area .owl-theme .owl-nav.disabled + .owl-dots{
-        margin-top: 0;
-    }
-    .fudiku-home-area .home-img{
-        /* border: 1px solid #000; */
-    }
-    .fudiku-home-area .home-img img{
-        object-fit: contain;
-        height: 100%;
-        width: 100%;
-    }
-    .fudiku-home-area .home-text{
-        text-align: center;
-        margin-top: 1.25rem;
-    }
+    
+    
     .fudiku-home-area .home-text .title,
     .fudiku-home-area .body-text,
     .fudiku-home-area .btn{
@@ -1780,6 +1964,7 @@ button:focus{
     }
     .fudiku-feature-area .feature-content .col-md-3{
         max-width: 50%;
+        margin-bottom: 1rem;
     }
     .fudiku-location-area .location-form{
         position: absolute;
@@ -1790,7 +1975,7 @@ button:focus{
         position: relative;
         background-color: #FFF;
         padding: 1.5rem 1.5rem;
-        border-top: 1px solid #EFEFEF;
+        border-top: 2px solid #EFEFEF;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
@@ -1810,8 +1995,31 @@ button:focus{
     .fudiku-location-area .location-img img{
         object-fit: contain;
         width: 100%;
-        height: 100%;
+        /* height: 100%; */
     }    
+    .fudiku-menu-area .menu-content::before{
+        height: 260px;
+        
+    }
+    .fudiku-order-area .order-menu::before{
+        height: 260px;
+        
+    }
+    .fudiku-order-area .order-menu-item{
+        position: static;
+        height: 250px;
+        /* border: 1px solid #000; */
+    }
+    .fudiku-order-area .order-menu-item .menu-item{
+        height: 250px;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .fudiku-order-area .order-menu-item .menu-desc{
+        height: 100px;
+        background-color: #FFF;
+        padding: 10px;   
+    }
     .fudiku-order-area .order-packet{
         margin-top: 1.25rem;
     }
@@ -1820,6 +2028,12 @@ button:focus{
     }
     .fudiku-schedule-area .schedule-cta{
         margin-top: 1.25rem;
+    }
+    .fudiku-schedule-area .schedule-menu .menu-item{
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+        border-radius: 15px;
     }
     .fudiku-menu-area .menu-cta .btn,
     .fudiku-order-area .order-cta .btn,

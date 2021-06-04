@@ -23,16 +23,16 @@
       <div class="navbar-logo">
         <a href="{{ route('home') }}" class="navbar-brand"><img src="{{ asset('img/logo/fudiku.png') }}" alt=""></a>
       </div>
-      <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#foodible-menu" aria-controls="foodible-menu" aria-expanded="false" aria-label="">
+      <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#web-collapse" aria-controls="web-collapse" aria-expanded="false" aria-label="">
           <i class="icofont-navigation-menu"></i>
       </button>
-      <div class="collapse navbar-collapse" id="header-web-menu">
+      <div class="collapse navbar-collapse" id="web-collapse">
         <ul class="navbar-nav ml-auto">
             @guest
                 <!-- <form action="{{ route('login') }}" class="form-inline">
                   <button class="btn login bg-light">{{ __('Masuk') }}</button>
                 </form> -->
-                <a href="{{ route('login') }}" class="btn login ">{{ __('Masuk') }}</a> 
+                <a href="{{ route('login') }}" class="btn login">{{ __('Masuk') }}</a> 
                 @if (Route::has('register'))
                   <!-- <form action="{{ route('register') }}" class="form-inline">
                     <button class="btn login bg-primary">{{ __('Daftar') }}</button>
@@ -77,17 +77,17 @@
       <div class="navbar-logo">
         <a href="{{ route('home') }}" class="navbar-brand"><img src="{{ asset('img/logo/fudiku.png') }}" alt=""></a>
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-collapse" aria-controls="foodible-menu" aria-expanded="false" aria-label="">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-collapse" aria-controls="web-collapse" aria-expanded="false" aria-label="">
           <i class="icofont-navigation-menu"></i>
       </button>
       <div class="collapse navbar-collapse" id="mobile-collapse" >
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="{{ route('about') }}" class="nav-link" data-target="">About</a>
           </li>
           <li class="nav-item">
             <a href="{{ route('contact') }}" class="nav-link" data-target="">Contact</a>
-          </li>
+          </li> -->
           @guest
                 <a href="{{ route('login') }}" class="btn login ">{{ __('Masuk') }}</a> 
                     @if (Route::has('register'))

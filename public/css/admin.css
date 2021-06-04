@@ -1,17 +1,17 @@
 @font-face{
-  font-family: 'ChromaticaLight';
-	src: url('../fonts/Chromatica/Chromatica-Light.ttf');
+  font-family: 'ManropeLight';
+	src: url('../fonts/Manrope/Manrope-Light.ttf');
 }
 @font-face{
-  font-family: 'Chromatica';
-	src: url('../fonts/Chromatica/Chromatica-Regular.ttf');
+  font-family: 'Manrope';
+	src: url('../fonts/Manrope/Manrope-Regular.ttf');
 }
 @font-face{
-  font-family: 'ChromaticaBold';
-  src: url('../fonts/Chromatica/Chromatica-Bold.ttf');
+  font-family: 'ManropeBold';
+  src: url('../fonts/Manrope/Manrope-Bold.ttf');
 }
 body {
-  font-family: 'ChromaticaLight';
+  font-family: 'ManropeLight';
   overflow-x: hidden;
   background: #F5F7FA;
 }
@@ -50,7 +50,7 @@ body {
   color: #000;
 }
 .sidebar-profile .profile-info .username{
-  font-family: 'ChromaticaBold';
+  font-family: 'ManropeBold';
 }
 .sidebar-menu{
   width: 15rem;
@@ -87,6 +87,7 @@ body {
   width: 768px;
   margin-left: 15px;
 }
+
 .main-nav .navbar-search .form-search{
   position: relative;
 }
@@ -104,8 +105,19 @@ body {
 .main-nav .navbar-search button:focus{
   box-shadow: none;
 }
+.main-nav .navbar-nav{
+  flex-direction: row;
+
+}
 .main-nav .nav-item{
   margin-left: 15px;
+}
+.main-nav .nav-link{
+  width: 40px;
+  height: 40px; 
+  background-color: #F0F0F0;
+  border-radius: 50%;
+  text-align: center;
 }
 .main-nav .nav-link i{
   line-height: 25px;
@@ -134,10 +146,10 @@ body {
   border-radius: 10px;
 }
 .main-heading .breadcrumb-item{
-  font-family: 'ChromaticaBold';
+  font-family: 'ManropeBold';
 }
 .main-heading .breadcrumb-item.active{
-  font-family: 'ChromaticaLight';
+  font-family: 'ManropeLight';
 }
 .main-body .table-area{
   background-color: #FFF;
@@ -211,22 +223,19 @@ body {
     display: flex;
   }
   .main-nav .navbar-search{
-    width: 300px;
+    width: auto;
+    display: flex;
   }
-  .main-nav .navbar-nav{
-    flex-direction: row;
-
-  }
-  .main-nav .nav-link{
-    width: 40px;
-    height: 40px; 
-    background-color: #F0F0F0;
-    border-radius: 50%;
-    text-align: center;
-  }
-
   .main-nav .navbar-nav .dropdown-menu{
     position: absolute;
   }
-  
+  .main-dashboard .card-box .card{
+    margin-bottom: 1rem;
+  }
+  .main-dashboard .card-circle{
+    display: flex;
+    flex-direction: row;
+    display: none;
+    border: 1px solid #000;
+  }
 }

@@ -1,25 +1,25 @@
 @font-face{
-	font-family: 'ChromaticaLight';
-	src: url('../fonts/Chromatica/Chromatica-Light.ttf');
+	font-family: 'ManropeLight';
+	src: url('../fonts/Manrope/Manrope-Light.ttf');
 }
 @font-face{
-	font-family: 'Chromatica';
-	src: url('../fonts/Chromatica/Chromatica-Regular.ttf');
+	font-family: 'Manrope';
+	src: url('../fonts/Manrope/Manrope-Regular.ttf');
 }
 
 body{
     background-color: #F9F8F7;
-    font-family: 'Chromatica';
+    font-family: 'Manrope';
     margin: 0;
     padding: 0;
 }
 .fudiku-register-user .form-register input{
-    border-radius: 10px;
+    border-radius: 15px;
     height: 50px;
     padding-left: 15px;
     font-size: 14px;
     border: 2px solid #F0F0F0;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
 }
 .fudiku-register-user .form-register input:focus{
     box-shadow: none;
@@ -29,11 +29,11 @@ body{
 .fudiku-register-user .form-register .btn{
     height: 50px;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
     color: #FFF;
     background-image: linear-gradient(180deg,#F03A40,#EB484E);
     border-color: #F03A40;
-    font-family: 'ChromaticaLight';
+    font-family: 'ManropeLight';
     
 }
 @media(min-width: 576px){
@@ -48,7 +48,7 @@ body{
         position: relative;
         overflow: hidden;
         border-radius: 5px;
-        font-family: 'Chromatica';
+        font-family: 'Manrope';
         width: 40vw;
         background-color: #FFF;
         padding: 200px 50px;

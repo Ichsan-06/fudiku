@@ -6,22 +6,22 @@
 
 <div class="fudiku-home-area">
     <div class="container-lg">
-        <div class="home-banner owl-carousel owl-theme">
+        <div class="home-content owl-carousel owl-theme">
             @for($i = 0; $i < 4; $i++)
             <div class="home-item">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="home-img">
                             <img src="{{ asset('img/banner/1.png') }}" class="w-100" alt="">
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <div class="home-text">
                             <h3 class="title">Solusi makan harianmu</h3> 
                             <p class="body-text">Pesan catering untuk makan siang, makan malam, dan event catering enak, higienis, ga pake ribet.</p>
                             <a href="{{ route('location') }}" class="btn">Aku mau pesan!</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             @endfor
@@ -34,16 +34,52 @@
         <div class="feature-title">
             <h4 class="title">Kenapa harus pesan di Fudiku?</h4>
         </div>
-        <div class="feature-content">
-            <div class="row">
+        <div class="feature-content owl-carousel owl-theme">
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="flaticon-free-delivery"></i>  
+                </div>
+                <div class="feature-info">
+                    <h6 class="title">Gratis Ongkir</h6>
+                    <p class="subtitle">Harga menu sudah <br>termasuk biaya pengiriman</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="flaticon-calendar"></i> 
+                </div>
+                <div class="feature-info">
+                    <h6 class="title">Bebas Atur Jadwal</h6>
+                    <p class="subtitle">Pilih tanggal kapan <br>pesananmu akan diantar</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="flaticon-reception"></i> 
+                </div>
+                <div class="feature-info">
+                    <h6 class="title">Fast Delivery</h6>
+                    <p class="subtitle">Makananmu akan tiba <br> pada waktu yang ditentukan</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="flaticon-award"></i> 
+                </div>
+                <div class="feature-info">
+                    <h6 class="title">High Quality</h6>
+                    <p class="subtitle">Menu telah dikurasi dan <br> melewati quality control</p>
+                </div>
+            </div>
+            <!-- <div class="row">
                 <div class="col-md-3">
                     <div class="feature">
                         <div class="feature-icon">
                         <i class="flaticon-free-delivery"></i>  
                         </div>
                         <div class="feature-info">
-                        <h6 class="subtitle">Gratis Ongkir</h6>
-                        <p class="body-text">Harga menu sudah <br>termasuk biaya pengiriman</p>
+                        <h6 class="title">Gratis Ongkir</h6>
+                        <p class="subtitle">Harga menu sudah <br>termasuk biaya pengiriman</p>
                         </div>
                     </div>
                 </div>
@@ -53,8 +89,8 @@
                             <i class="flaticon-calendar"></i> 
                         </div>
                         <div class="feature-info">
-                        <h6 class="subtitle">Bebas Atur Jadwal</h6>
-                        <p class="body-text">Pilih tanggal kapan <br>pesananmu akan diantar</p>
+                        <h6 class="title">Bebas Atur Jadwal</h6>
+                        <p class="subtitle">Pilih tanggal kapan <br>pesananmu akan diantar</p>
                         </div>
                     </div>
                 </div>
@@ -64,8 +100,8 @@
                             <i class="flaticon-award"></i> 
                         </div>
                         <div class="feature-info">
-                        <h6 class="subtitle">High Quality</h6>
-                        <p class="body-text">Menu telah dikurasi dan <br> melewati quality control</p>
+                        <h6 class="title">High Quality</h6>
+                        <p class="subtitle">Menu telah dikurasi dan <br> melewati quality control</p>
                         </div>
                     </div>
                 </div>
@@ -75,12 +111,12 @@
                             <i class="flaticon-reception"></i> 
                         </div>
                         <div class="feature-info">
-                        <h6 class="subtitle">Fast Delivery</h6>
-                        <p class="body-text">Makananmu akan tiba <br> pada waktu yang ditentukan</p>
+                        <h6 class="title">Fast Delivery</h6>
+                        <p class="subtitle">Makananmu akan tiba <br> pada waktu yang ditentukan</p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -90,7 +126,51 @@
         <div class="packet-title">
             <h4 class="title">Paket terbaik untuk kamu!</h4>
         </div>
-        <div class="packet-content">
+        <div class="packet-content owl-carousel owl-theme">
+            <div class="packet">
+                <a href="{{ route('location') }}">
+                    <div class="packet-img">
+                        <img src="{{ asset('img/packet/event-catering.jpg') }}" alt="">
+                    </div>
+                    <div class="packet-category">
+                        <h5 class="name">Event Catering</h5>
+                        <p class="desc">Nasi kotak, prasmanan, snacks, dan lainnya</p>
+                    </div>
+                </a>
+            </div>
+            <div class="packet">
+                <a href="{{ route('location') }}">
+                    <div class="packet-img">
+                        <img src="{{ asset('img/packet/family-pax.jpg') }}" alt="">
+                    </div>
+                    <div class="packet-category">
+                        <h5 class="name">Event Catering</h5>
+                        <p class="desc">Nasi kotak, prasmanan, snacks, dan lainnya</p>
+                    </div>
+                </a>
+            </div>
+            <div class="packet">
+                <a href="{{ route('location') }}">
+                    <div class="packet-img">
+                        <img src="{{ asset('img/packet/single-pax.jpg') }}" alt="">
+                    </div>
+                    <div class="packet-category">
+                        <h5 class="name">Event Catering</h5>
+                        <p class="desc">Nasi kotak, prasmanan, snacks, dan lainnya</p>
+                    </div>
+                </a>
+            </div>
+            <div class="packet">
+                <a href="{{ route('location') }}">
+                    <div class="packet-img">
+                        <img src="{{ asset('img/packet/event-catering.jpg') }}" alt="">
+                    </div>
+                    <div class="packet-category">
+                        <h5 class="name">Event Catering</h5>
+                        <p class="desc">Nasi kotak, prasmanan, snacks, dan lainnya</p>
+                    </div>
+                </a>
+            </div>
             <div class="row">
                 <!-- @foreach($categories as $category) -->
                 <!-- <div class="col-md-4">
@@ -108,48 +188,54 @@
                     </div>
                 </div> -->
                 <!-- @endforeach -->
-                <div class="col-md-4">
+                <!-- <div class="col-md-4">
                     <div class="packet">
-                        <div class="packet-img">
-                            <img src="{{ asset('img/packet/single-pax.jpg') }}" alt="">
-                        </div>
-                        <div class="packet-category">
-                            <h5 class="name">Single Pax</h5>
-                            <p class="desc">Satu porsi lauk, sayur, nasi, dan side dish</p>
-                        </div>
-                        <div class="packet-cta">
-                            <a href="{{ route('location') }}" class="btn btn-packet">Pilih Paket</a>
-                        </div>  
+                        <a href="{{ route('location') }}">
+                            <div class="packet-img">
+                                <img src="{{ asset('img/packet/single-pax.jpg') }}" alt="">
+                            </div>
+                            <div class="packet-category">
+                                <h5 class="name">Single Pax</h5>
+                                <p class="desc">Satu porsi lauk, sayur, nasi, dan side dish</p>
+                            </div>
+                            <div class="packet-cta">
+                                <a href="{{ route('location') }}" class="btn btn-packet">Pilih Paket</a>
+                            </div>  
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="packet">
-                        <div class="packet-img">
-                            <img src="{{ asset('img/packet/family-pax.jpg') }}" alt="">
-                        </div>
-                        <div class="packet-category">
-                            <h5 class="name">Family Pax</h5>
-                            <p class="desc">Lauk dan sayur 3-4 porsi, bisa tambah nasi dan side dish</p>
-                        </div>
-                        <div class="packet-cta">
-                            <a href="{{ route('location') }}" class="btn btn-packet">Pilih Paket</a>
-                        </div>  
+                        <a href="{{ route('location') }}">
+                            <div class="packet-img">
+                                <img src="{{ asset('img/packet/family-pax.jpg') }}" alt="">
+                            </div>
+                            <div class="packet-category">
+                                <h5 class="name">Family Pax</h5>
+                                <p class="desc">Lauk dan sayur 3-4 porsi, bisa tambah nasi dan side dish</p>
+                            </div>
+                            <div class="packet-cta">
+                                <a href="{{ route('location') }}" class="btn btn-packet">Pilih Paket</a>
+                            </div>  
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="packet">
-                        <div class="packet-img">
-                            <img src="{{ asset('img/packet/event-catering.jpg') }}" alt="">
-                        </div>
-                        <div class="packet-category">
-                            <h5 class="name">Event Catering</h5>
-                            <p class="desc">Nasi kotak, prasmanan, snacks, dan lainnya</p>
-                        </div>
-                        <div class="packet-cta">
-                            <a href="{{ route('location') }}" class="btn btn-packet">Pilih Paket</a>
-                        </div>  
+                        <a href="{{ route('location') }}">
+                            <div class="packet-img">
+                                <img src="{{ asset('img/packet/event-catering.jpg') }}" alt="">
+                            </div>
+                            <div class="packet-category">
+                                <h5 class="name">Event Catering</h5>
+                                <p class="desc">Nasi kotak, prasmanan, snacks, dan lainnya</p>
+                            </div>
+                            <div class="packet-cta">
+                                <a href="{{ route('location') }}" class="btn btn-packet">Pilih Paket</a>
+                            </div>  
+                        </a>
                     </div>
-                </div>
+                </div> -->
             </div>    
         </div>
 
@@ -172,9 +258,19 @@
         <div class="supported-title">
             <h4 class="title">Supported By</h4>
         </div>
-        <div class="supported-content">
+        <div class="supported-content owl-carousel owl-theme">
             <div class="supported">
                 <div class="supported-img"> 
+                    <img src="{{ asset('img/supported/umsu.png') }}" alt="">
+                </div>
+            </div>
+            <div class="supported">
+                <div class="supported-img">
+                    <img src="{{ asset('img/supported/1000.png') }}" alt="">
+                </div>
+            </div>
+            <div class="supported">
+                <div class="supported-img">
                     <img src="{{ asset('img/supported/umsu.png') }}" alt="">
                 </div>
             </div>

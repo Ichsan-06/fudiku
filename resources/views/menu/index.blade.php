@@ -43,8 +43,8 @@
 <div class="fudiku-delivery-area">
     <div class="container-lg">
         <div class="delivery-content">
-            <div class="delivery-info">
-                <h6><strong>Pengantaran 11.00 - 13.00 WIB</strong></h6>
+            <div class="delivery-title">
+                <h6 class="title">Pengantaran 11.00 - 13.00 WIB</h6>
                 <small>Pesananmu akan tiba secepatnya.</small>
             </div>
         </div>
@@ -58,14 +58,24 @@
         {{-- <form action="{{ route('order') }}" method="POST"> --}}
             @csrf
             <input type="hidden" name="location" value="{{ $location }}">
-                <input type="hidden" name="id" value="{{ $sub->id }}">
-                @php
-                    $product = App\Product::where('id_sub_category',$sub->id)
-                    ->where( 'date_delivery', '>', \Carbon\Carbon::now())
-                    ->orderBy('date_delivery','ASC')
-                    ->limit(15)
-                    ->get();                    
-                @endphp
+            <input type="hidden" name="id" value="{{ $sub->id }}">
+            @php
+            $product = App\Product::where('id_sub_category',$sub->id)
+            ->where('date_delivery', '>', \Carbon\Carbon::now())
+            ->orderBy('date_delivery','ASC')
+            ->limit(15)
+            ->get();                    
+            @endphp
+            <div class="menu-wrapper">
+                @foreach($categories as $category)
+                <div class="wrapper-title">
+                    <h4>{{ $category->name }}
+                        <span class="float-right see"><a href="">Lihat Semua</a></span>
+                    </h4>
+                </div>
+                
+            
+
                 <div class="menu-content">
                     <div class="menu-title">
                         <h3 class="title">{{ $sub->name }}</h3>
@@ -125,7 +135,8 @@
                 </div>
                 
                 {{-- </form> --}}
-                
+                @endforeach
+            </div>    
     </div>
 </div>
 @endforeach 
