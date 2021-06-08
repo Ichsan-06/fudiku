@@ -43,6 +43,7 @@
                                     </div>
                                 @endforeach
                             </div>
+                            
                             <div class="menu-popup" id="popUpMenu">
                                 <div class="modal fade " id="updateModal" tabindex="-1" aria-labelledby="menu-popup" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered">
@@ -65,9 +66,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="schedule-cta">
-                                <button class="btn next">Lanjutkan</button>
-                            </div>
+                            
+                        </div>
+                        <div class="schedule-cta">
+                            <button class="btn next">Lanjutkan</button>
                         </div>
                     </div>   
                 </div>

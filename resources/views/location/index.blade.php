@@ -6,28 +6,36 @@
 
 <div class="fudiku-location-area">
     <div class="location-content">
-        <div class="location-form"> 
-            <form action="{{ route('postLocation') }}" class="form" method="POST">
-                @csrf
-                <div class="location-title">
-                    <h4 class="title">Pilih Lokasimu</h4>
-                </div>
-                <div class="form-field">
-                    <input type="text" id="location" required list="list-city" autocomplete="off" name="location" tabindex="1" class="location form-control" placeholder="Cari Kabupaten Kamu">
-                    <button type="submit" class="btn"><i class="icofont-search"></i></button>
-                    {{-- <datalist id="list-city">
-                        @foreach ($city as $data)
-                            <option value="{{ $data->location }}"></option>
-                        @endforeach
-                    </datalist>  --}}
-                    
-                    <div class="location-search-area"></div>
-                </div>
-            </form>
+        <div class="location-form-area">
+            <div class="location-form"> 
+                <form action="{{ route('postLocation') }}" class="form" method="POST">
+                    @csrf
+                    <div class="location-title">
+                        <h4 class="title">Pilih Lokasimu</h4>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="location" required list="list-city" autocomplete="off" name="location" tabindex="1" class="location form-control" placeholder="Cari Kabupaten Kamu">
+                        <button type="submit" class="btn"><i class="icofont-search"></i></button>
+                        {{-- <datalist id="list-city">
+                            @foreach ($city as $data)
+                                <option value="{{ $data->location }}"></option>
+                            @endforeach
+                        </datalist>  --}}
+                        
+                        <div class="location-search-area"></div>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="location-img-area">
-            <div class="location-img">
-                <img src="{{ asset('img/vector/map.png') }}" alt="">
+            <div class="location-slider owl-carousel">
+                @for($i = 0; $i < 4; $i++)
+                <div class="location-item">
+                    <div class="location-img">
+                        <img src="{{ asset('img/vector/map.png') }}" alt="">
+                    </div>
+                </div>
+                @endfor
             </div>
         </div>
     </div>

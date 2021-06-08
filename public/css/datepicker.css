@@ -342,7 +342,7 @@
     color: #9c9c9c;
     margin-left: 5px; }
   .datepicker--nav-title:hover {
-    background: #f0f0f0; }
+    background: none; }
   .datepicker--nav-title.-disabled- {
     cursor: default;
     background: none; }

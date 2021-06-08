@@ -46,12 +46,11 @@ button:focus{
     margin: 0rem 0rem .5rem 0rem;
     overflow: hidden;
     /* background-color: rgb(248, 248, 248); */
-    background-color: #FFF;
     
 }
-.fudiku-home-area::after{
+/* .fudiku-home-area::after{
     display: block;
-    z-index: -1;
+    z-index: 1;
     top: -5rem;
     right: -53rem;
     border-radius: 25rem;
@@ -61,20 +60,52 @@ button:focus{
     position: absolute;
     width: 100%;
     height: 100px;
-}
+} */
 .fudiku-home-area .home-content{
 }
-.fudiku-home-area .home-item .home-img{
+.fudiku-home-area .home-item{
+    background-image: url('../img/banner/2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.fudiku-home-area .home-item::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+.fudiku-home-area .home-text{
+    color: #FFF;
+}
+.fudiku-home-area .home-text h1{
+    font-family: 'ManropeExtraBold';
+}
+.fudiku-home-area .home-text p{
+    font-family: 'ManropeLight';
+}
+/* .fudiku-home-area .home-item .home-img{
     animation: fadeIn; 
     animation-duration: 3s;
 }
 .fudiku-home-area .home-item .home-img img{
     border-radius: 15px;
     object-fit: contain;
-}
-.fudiku-home-area .home-item .home-img .owl-item.active{
+} */
+.fudiku-home-area .home-item .owl-item.active{
     animation: fadeInLeft; 
     animation-duration: 3s;
+}
+.fudiku-home-area .home-content .owl-dots{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 10px;
 }
 .fudiku-home-area .home-content .owl-dots .owl-dot{
     background-color: rgba(0,0,0,0);
@@ -124,17 +155,17 @@ button:focus{
     /* background-color: rgb(248, 248, 248); */
     background-color: #FFF;
 }
-.fudiku-feature-area .feature-title{
-    text-align: center;
-}
+
 .fudiku-feature-area .feature-title .title{
     font-family: 'ManropeExtraBold';
+    animation: fadeInLeft;
+    animation-duration: 3s;
 }
 .fudiku-feature-area .feature-content{
     margin-top: 1.5rem;
 }
 .fudiku-feature-area .feature{
-    animation: fadeInUp ;
+    animation: fadeInLeft ;
     animation-duration: 3s;
     text-align: center;
     background-color: #FFF;
@@ -148,7 +179,7 @@ button:focus{
 }
 .fudiku-feature-area .feature-icon i:before{
     color: #EB484E;
-    font-size: 50px;
+    font-size: 55px;
 
 }
 .fudiku-feature-area .feature-info .title{
@@ -167,10 +198,21 @@ button:focus{
     /* background-color: rgb(248, 248, 248); */
 }
 .fudiku-packet-area .packet-title{
-    text-align: center;
+    /* display: flex; */
 }
 .fudiku-packet-area .packet-title .title{
     font-family: 'ManropeExtraBold';
+    animation: fadeInLeft;
+    animation-duration: 3s;
+}
+.fudiku-packet-area .packet-title .see{
+    font-size: 14px;
+    padding: 5px 0px 0px 0px;
+}
+.fudiku-packet-area .packet-title .see a{
+    color: #F03A40;
+    font-family: 'ManropeBold';
+    text-decoration: none;
 }
 .fudiku-packet-area .packet-content{
     margin-top: 1.25rem;
@@ -179,7 +221,7 @@ button:focus{
     overflow: hidden;
     /* box-shadow: 0 2px 4px rgb(15 34 58 / 12%); */
     border: 2px solid #EFEFEF;
-    animation: fadeIn;
+    animation: fadeInLeft;
     animation-duration: 3s;
     border-radius: 15px;
 }
@@ -278,7 +320,6 @@ button:focus{
 
 }
 .fudiku-supported-area .supported-title .title{
-    text-align: center;
     font-family: 'ManropeExtraBold';
 }
 .fudiku-supported-area .supported-content{
@@ -288,6 +329,7 @@ button:focus{
 }
 .fudiku-supported-area .supported-content .supported{
     margin: .5rem;
+    /* border: 1px solid #000; */
     /* padding: .5rem;
     border-radius: 15px;
     background-color: #FFF; */
@@ -295,6 +337,7 @@ button:focus{
 .fudiku-supported-area .supported-content .supported-img{
     height: 150px;
     width: 150px;
+    margin: auto;
 }
 .fudiku-supported-area .supported-content .supported-img img{
     width: 100%;
@@ -412,7 +455,7 @@ button:focus{
     overflow: hidden;
     padding: 15px;
     margin-bottom: 1.25rem;
-    background-color: #f0f0f0;
+    background-color: #F5F7FA;
     border-radius: 15px;
 }
 .fudiku-menu-area .menu-content::before{
@@ -544,7 +587,6 @@ button:focus{
 .fudiku-order-area{
     position: relative;
     padding: 1.5rem 0rem;
-    margin: .5rem 0rem 0rem 0rem;
     background-color: #FFF;
 }
 /* .fudiku-order-area .fudiku-menu-area-option::before{
@@ -579,7 +621,7 @@ button:focus{
 .fudiku-order-area .order-menu{
     position: relative;
     overflow: hidden;
-    background-color: #F0F0F0;
+    background-color: #F5F7FA;
     border-radius: 15px;
     padding: 15px;
 }
@@ -716,7 +758,6 @@ button:focus{
 .fudiku-schedule-area{
     position: relative;
     padding: 1.5rem 0rem;
-    margin: .5rem 0rem 0rem 0rem;
     background-color: #FFF;
 }
 .fudiku-schedule-area .schedule-calendar{
@@ -736,6 +777,7 @@ button:focus{
 }
 .fudiku-schedule-area .schedule-calendar .datepicker--days-names{
     margin: 0;
+    /* border-bottom: 1px solid #EFEFEF; */
 }
 .fudiku-schedule-area .schedule-calendar .datepicker--day-name{
     color: #EB484E;
@@ -749,13 +791,16 @@ button:focus{
     height: 50px;
     width: 50px;
 }
+.fudiku-schedule-area .schedule-calendar .datepicker--nav-title:hover{
+    background-color: none;
+}
 .fudiku-schedule-area .schedule-calendar .datepicker--nav-action:hover{
     background-color: transparent;
 }
 .fudiku-schedule-area .schedule-calendar .datepicker--cell{
     height: 50px;
     border-radius: 0;
-    border-top: 1px solid #EFEFEF;
+    /* border-top: 1px solid #EFEFEF; */
 }
 .fudiku-schedule-area .schedule-calendar .datepicker--cell.-selected-{
     background-color: #F03A40;
@@ -763,7 +808,6 @@ button:focus{
 
 .fudiku-schedule-area .schedule-menu-item{
     position: static;
-    height: 250px;
     margin-bottom: 1.25rem;
 }
 .fudiku-schedule-area .schedule-menu{
@@ -778,7 +822,6 @@ button:focus{
     position: absolute;
     content: '';
     width: 100%;
-    height: 242px;
     top: 0;
     bottom: 0;
     right: 0;
@@ -873,7 +916,6 @@ button:focus{
     position: relative;
     padding: 1.5rem 0rem;
     background: #FFF;
-    margin: .5rem 0rem 0rem 0rem;
 }
 .fudiku-form-area .form-title{
     margin-bottom: 1.25rem;
@@ -930,7 +972,6 @@ button:focus{
 .fudiku-payment-area{
     position: relative;
     padding: 1.5rem 0rem;
-    margin-top: 0.5rem;
     background-color: #FFF;
 }
 .fudiku-payment-area .payment-title .title{
@@ -987,7 +1028,6 @@ button:focus{
 .fudiku-payment-detail-area{
     position: relative;
     padding: 1.5rem 0rem;
-    margin: .5rem 0rem 0rem 0rem;
     background-color: #FFF;
 }
 .fudiku-payment-detail-area .detail-information{
@@ -1001,7 +1041,6 @@ button:focus{
 .fudiku-payment-detail-area .detail-form{
     border: 2px solid #EFEFEF;
     padding: 1.5rem;
-    
     border-radius: 15px;
 }
 .fudiku-payment-detail-area .detail-form .form-group{
@@ -1037,7 +1076,6 @@ button:focus{
 .fudiku-cod-area{
     position: relative;
     padding: 1.5rem 0rem ;
-    margin: .5rem 0rem 0rem 0rem;
     background-color: #FFF;
     /* border: 1px solid #000; */
 }
@@ -1166,7 +1204,7 @@ button:focus{
     /* border: 1px solid #000; */
     margin-bottom: 1.25rem;
     width: 100%;
-    height: 400px;
+    height: 300px;
     margin: auto auto 1.25rem auto;
 }
 .fudiku-profile-blank-area .profile-blank-img img{
@@ -1186,13 +1224,17 @@ button:focus{
 }
 .fudiku-profile-blank-area .profile-blank-cta{
     /* border: 1px solid #000; */
+    margin: auto;
+    width: 300px; 
 }
 .fudiku-profile-blank-area .profile-blank-cta .btn{
     border: 2px solid #EB484E;
     font-family: 'ManropeLight';
     color: #EB484E;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
     padding: 12px;
+    width: 100%;
     border-radius: 15px;
 }
 .fudiku-profile-blank-area .profile-blank-cta .btn:focus{
@@ -1202,7 +1244,6 @@ button:focus{
 .fudiku-profile-edit-area{
     position: relative;
     padding: 1.5rem 0rem;
-    margin: .5rem 0rem 0rem 0rem;
     background-color: #FFFF;
 
 }
@@ -1293,12 +1334,11 @@ button:focus{
 .fudiku-finish-area{
     position: relative;
     padding: 1.5rem 0rem;
-    margin: .5rem 0rem 0rem 0rem;
     background-color: #FFFF;
 
 }
 .fudiku-finish-area .finish-img{
-    height: 400px;
+    height: 300px;
     width: 100%;
     margin: auto auto 1.25rem auto;
     /* border: 1px solid #000; */
@@ -1318,7 +1358,6 @@ button:focus{
 .fudiku-cart-area{
     position: relative;
     padding: 1.5rem 0rem;
-    /* margin: .5rem 0rem 0rem 0rem; */
     background-color: #FFF;
 }
 .fudiku-cart-area .cart-content{
@@ -1463,7 +1502,7 @@ button:focus{
     /* border: 1px solid #000; */
     margin-bottom: 1.25rem;
     width: 100%;
-    height: 400px;
+    height: 300px;
     margin: auto auto 1.25rem auto;
 }
 .fudiku-cart-empty-area .cart-empty-img img{
@@ -1483,6 +1522,8 @@ button:focus{
 }
 .fudiku-cart-empty-area .cart-empty-cta{
     /* border: 1px solid #000; */
+    margin: auto;
+    width: 300px;
 }
 .fudiku-cart-empty-area .cart-empty-cta .btn{
     border: 2px solid #EB484E;
@@ -1596,11 +1637,17 @@ button:focus{
     }
     .fudiku-home-area{
         position: relative;
-        padding: 3.5rem 0rem;
+        /* padding: 3.5rem 0rem; */
         margin: 0rem 0rem .5rem 0rem;
         overflow: hidden;
-        background-color: #FFF;
+        /* background-color: #FFF; */
         
+    }
+    .fudiku-home-area .home-item{
+        height: 660px;
+    }
+    .fudiku-home-area .home-text{
+        margin-top: 260px;
     }
     .fudiku-feature-area{
         position: relative;
@@ -1608,12 +1655,18 @@ button:focus{
         margin: 0.5rem 0rem 0.5rem 0rem;
         background-color: #FFF;
     }
+    .fudiku-feature-area .feature-title,
+    .fudiku-packet-area .packet-title,
+    .fudiku-supported-area .supported-title{
+        text-align: center;
+    }
     .fudiku-packet-area{
         position: relative;
         padding: 3.5rem 0rem;
         margin: 0.5rem 0rem 0.5rem 0rem;
         background-color: #FFF;
     }
+    
     .fudiku-cta-area{
         position: relative;
         padding: 3.5rem 0rem;
@@ -1676,6 +1729,7 @@ button:focus{
     }
     .fudiku-search-area .fudiku-category .nav-item.active .nav-link{
         background-color: #EB484E;
+        border: 2px solid #EB484E;
         color: #FFF;
     }
     .fudiku-search-area .fudiku-category .nav-link{
@@ -1698,11 +1752,22 @@ button:focus{
         padding-right: 15px;
         padding-left: 15px;
     }
+    .fudiku-location-area .location-form-area{
+        border: 1px solid #000;
+        width: 50%; 
+    }    
+    
     .fudiku-location-area .location-form{
         position: relative;
         margin: 150px 0px ;
-        width: 50%; 
-    }    
+        padding: 3.5rem 3rem;
+        border-radius: 15px;
+        width: 100%;
+        z-index: 1000;
+        background-color: #FFF;
+        border: 2px solid #EFEFEF;
+        /* box-shadow: 0 2px 4px rgb(15 34 58 / 12%); */
+    }
     .fudiku-location-area .location-form::before{
         content: '';
         position: absolute;
@@ -1714,20 +1779,12 @@ button:focus{
         width: 150px;
         border-radius: 50%;
     }
-    .fudiku-location-area .location-form .form{
-        position: relative;
-        padding: 3.5rem 3rem;
-        border-radius: 15px;
-        background-color: #FFF;
-        border: 2px solid #EFEFEF;
-        /* box-shadow: 0 2px 4px rgb(15 34 58 / 12%); */
-    }
     .fudiku-location-area .location-img-area{
         width: 50%;
-        /* border: 1px solid #000; */
+        border: 1px solid #000;
     }
     .fudiku-location-area .location-img{
-        height: 500px;
+        height: 486px;
         width: 100%;
         /* border: 1px solid #000; */
     }
@@ -1739,32 +1796,32 @@ button:focus{
     .fudiku-menu-area .menu-content::before{
         height: 243px;
     }
-    .fudiku-order-area .order-menu::before{
+    .fudiku-order-area .order-menu::before,
+    .fudiku-schedule-area .schedule-menu::before{
         height: 267px;
         
     }
     .fudiku-order-area .order-menu-item{
         position: static;
-        height: 250px;
+        height: 260px;
         /* border: 1px solid #000; */
     }
     .fudiku-order-area .order-menu-item .menu-item{
-        height: 250px;
+        height: 260px;
         border-radius: 15px;
         overflow: hidden;
     }
     .fudiku-order-area .order-menu-item .menu-desc{
-        height: 100px;
+        /* height: 100px; */
         background-color: #FFF;
     }
     .fudiku-schedule-area .schedule-menu .menu-item{
         position: relative;
         overflow: hidden;
-        height: 250px;
+        height: 260px;
         border-radius: 15px;
     }
     .fudiku-schedule-area .schedule-menu .menu-desc{
-        height: 100px;
         background-color: #FFF;
     }
 }
@@ -1872,7 +1929,6 @@ button:focus{
         color: #FFF;
         line-height: 40px;
     }
-    .fudiku-home-area,
     .fudiku-feature-area,
     .fudiku-packet-area,
     .fudiku-cta-area
@@ -1883,6 +1939,12 @@ button:focus{
     }
     .fudiku-supported-area{
         padding: 1.5rem 0rem 6rem 0rem;
+    }
+    .fudiku-home-area .home-item{
+        height: 670px;
+    }
+    .fudiku-home-area .home-text{
+        margin-top: 270px;
     }
     .fudiku-home-area .owl-theme .owl-nav.disabled + .owl-dots{
         margin-top: 1.25rem;
@@ -1899,6 +1961,11 @@ button:focus{
         text-align: center;
         margin-top: 1.25rem;
     } */
+    .fudiku-feature-area .feature-title,
+    .fudiku-packet-area .packet-title{
+        text-align: center;
+    }
+    
     .fudiku-delivery-area{
         background-color: #FFF;
         padding: 1.5rem 0rem;
@@ -1956,9 +2023,8 @@ button:focus{
         border: 2px solid #EFEFEF;
     }   
     
-    
-    .fudiku-home-area .home-text .title,
-    .fudiku-home-area .body-text,
+    .fudiku-home-area .home-text .big-text,
+    .fudiku-home-area .small-text,
     .fudiku-home-area .btn{
         margin-bottom: 1.25rem;
     }
@@ -2001,7 +2067,8 @@ button:focus{
         height: 260px;
         
     }
-    .fudiku-order-area .order-menu::before{
+    .fudiku-order-area .order-menu::before,
+    .fudiku-schedule-area .schedule-menu::before{
         height: 260px;
         
     }
@@ -2016,7 +2083,6 @@ button:focus{
         overflow: hidden;
     }
     .fudiku-order-area .order-menu-item .menu-desc{
-        height: 100px;
         background-color: #FFF;
         padding: 10px;   
     }
@@ -2056,7 +2122,7 @@ button:focus{
     .fudiku-profile-edit-area,
     .fudiku-finish-area,
     .fudiku-cod-area{
-        height: 664px;
+        height: 670px;
         /* border: 1px solid #000; */
     }
     

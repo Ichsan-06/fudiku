@@ -1,15 +1,15 @@
 $(document).ready(function(){
     $(window).scroll(function(){
         let scroll = $(window).scrollTop(); 
-        if(scroll >= 50){
+        if(scroll > 50){
             // $('.mobile-top-nav').addClass('fixed-top');
             // $('.fudiku-search-area').addClass('fixed-top');
-            // $('.mobile-bottom-nav').addClass('fixed-bottom');
+            // $('.mobile-bottom-nav').addClass('bottom-fixed');
         }    
         else{
             // $('.mobile-top-nav').removeClass('fixed-top');
             // $('.fudiku-search-area').removeClass('fixed-top');
-            // $('.mobile-bottom-nav').removeClass('fixed-bottom');
+            // $('.mobile-bottom-nav').removeClass('bottom-fixed');
         }
     });
 });
@@ -27,8 +27,32 @@ $(".home-content").owlCarousel({
     responsive:{
         0:{
             items:1,
+            nav:false
+        },
+        768:{
+            items:2,
             margin:10,
-            stagePadding: 15,
+            nav:false
+        },
+        992:{
+            items:1,
+            margin:10,
+        },
+    }
+});
+$(".location-slider").owlCarousel({
+    loop: false,
+    nav: false,
+    items: 1,
+    dots: true,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+    smartSpeed: 1200,
+    autoHeight: false,
+    autoplay: false,
+    responsive:{
+        0:{
+            items:1,
             nav:false
         },
         768:{

@@ -5,28 +5,37 @@
 @section('main')
 
 <div class="fudiku-home-area">
-    <div class="container-lg">
-        <div class="home-content owl-carousel owl-theme">
-            @for($i = 0; $i < 4; $i++)
-            <div class="home-item">
+    <div class="home-content owl-carousel owl-theme">
+        @for($i = 0; $i < 4; $i++)
+        <div class="home-item">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="home-img">
-                            <img src="{{ asset('img/banner/1.png') }}" class="w-100" alt="">
+                    <div class="col-md-6">
+                        <div class="home-text">
+                            <h1 class="big-text">Solusi makan harianmu</h1>
+                            <p class="small-text">Pesan catering untuk makan siang, makan malam, dan event catering enak, higienis, ga pake ribet.</p>
                         </div>
                     </div>
-                    <!-- <div class="col-md-4">
-                        <div class="home-text">
-                            <h3 class="title">Solusi makan harianmu</h3> 
-                            <p class="body-text">Pesan catering untuk makan siang, makan malam, dan event catering enak, higienis, ga pake ribet.</p>
-                            <a href="{{ route('location') }}" class="btn">Aku mau pesan!</a>
-                        </div>
-                    </div> -->
                 </div>
             </div>
-            @endfor
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <div class="home-img">
+                        <img src="{{ asset('img/banner/1.png') }}" class="w-100" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="home-text">
+                        <h3 class="title">Solusi makan harianmu</h3> 
+                        <p class="body-text">Pesan catering untuk makan siang, makan malam, dan event catering enak, higienis, ga pake ribet.</p>
+                        <a href="{{ route('location') }}" class="btn">Aku mau pesan!</a>
+                    </div>
+                </div>
+            </div> -->
         </div>
+        @endfor
     </div>
+
 </div>
 
 <div class="fudiku-feature-area">
@@ -41,7 +50,7 @@
                 </div>
                 <div class="feature-info">
                     <h6 class="title">Gratis Ongkir</h6>
-                    <p class="subtitle">Harga menu sudah <br>termasuk biaya pengiriman</p>
+                    <!-- <p class="subtitle">Harga menu sudah <br>termasuk biaya pengiriman</p> -->
                 </div>
             </div>
             <div class="feature">
@@ -50,7 +59,7 @@
                 </div>
                 <div class="feature-info">
                     <h6 class="title">Bebas Atur Jadwal</h6>
-                    <p class="subtitle">Pilih tanggal kapan <br>pesananmu akan diantar</p>
+                    <!-- <p class="subtitle">Pilih tanggal kapan <br>pesananmu akan diantar</p> -->
                 </div>
             </div>
             <div class="feature">
@@ -59,7 +68,7 @@
                 </div>
                 <div class="feature-info">
                     <h6 class="title">Fast Delivery</h6>
-                    <p class="subtitle">Makananmu akan tiba <br> pada waktu yang ditentukan</p>
+                    <!-- <p class="subtitle">Makananmu akan tiba <br> pada waktu yang ditentukan</p> -->
                 </div>
             </div>
             <div class="feature">
@@ -68,7 +77,7 @@
                 </div>
                 <div class="feature-info">
                     <h6 class="title">High Quality</h6>
-                    <p class="subtitle">Menu telah dikurasi dan <br> melewati quality control</p>
+                    <!-- <p class="subtitle">Menu telah dikurasi dan <br> melewati quality control</p> -->
                 </div>
             </div>
             <!-- <div class="row">
@@ -124,7 +133,9 @@
 <div class="fudiku-packet-area">
     <div class="container-lg">
         <div class="packet-title">
-            <h4 class="title">Paket terbaik untuk kamu!</h4>
+            <h4 class="title">Paket terbaik untuk kamu!
+                <!-- <span class="float-right see"><a href="">Lihat Semua</a></span> -->
+            </h4>
         </div>
         <div class="packet-content owl-carousel owl-theme">
             <div class="packet">
