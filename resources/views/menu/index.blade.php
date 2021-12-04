@@ -61,10 +61,10 @@
             <input type="hidden" name="id" value="{{ $sub->id }}">
             @php
             $product = App\Product::where('id_sub_category',$sub->id)
-            ->where('date_delivery', '>', \Carbon\Carbon::now())
-            ->orderBy('date_delivery','ASC')
-            ->limit(15)
-            ->get();                    
+                ->where('date_delivery', '>', \Carbon\Carbon::now())
+                ->orderBy('date_delivery','ASC')
+                ->limit(15)
+                ->get();                    
             @endphp
             <div class="menu-wrapper">
                 @foreach($categories as $category)

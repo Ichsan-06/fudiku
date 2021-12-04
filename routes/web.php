@@ -81,7 +81,7 @@ Auth::routes();
 Route::get('/loginadmin','LoginAdminController@index')->name('loginAdmin');
 Route::post('/postLoginAdmin','LoginAdminController@post')->name('postAdmin');
 
-Route::middleware('role:admin')->group(function () {
+// Route::middleware()->group(function () {
         Route::get('/admin','DashboardController@index')->name('dashboard');
 
         Route::get('/admin/category','CategoryController@index')->name('category');
@@ -137,4 +137,4 @@ Route::middleware('role:admin')->group(function () {
         // Route::get('/admin/deleteMap/{id}','MapController@delete');
 
         Route::get('/admin/ordering','OrderingController@index')->name('ordering');
-});
+// });
